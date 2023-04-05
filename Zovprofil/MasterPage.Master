@@ -1,0 +1,331 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" EnableViewState="false" CodeBehind="MasterPage.master.cs" Inherits="Zovprofil.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link runat="server" rel="shortcut icon" href="Images/logo.svg" type="image/x-icon"/>
+    <link href="Styles/master.css" rel="stylesheet" />
+    <link href="Styles/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.1.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/xregexp-all-min.js"></script>
+    <script src="https://mc.yandex.ru/metrika/tag.js"></script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-88396607-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+<meta name="yandex-verification" content="8b320b9979990d71" />
+
+
+<script type='text/javascript'>
+(function(){ var widget_id = 'gxANDlO9YX';var d=document;var w=window;function l(){
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/' + widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);
+    } if (d.readyState == 'complete') { l(); } else { if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } }
+    })();
+</script>
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter41317194 = new Ya.Metrika({
+                    id:41317194,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/41317194" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+    <script>
+        function ShowContent()
+        {
+            $(document.getElementById('Content')).fadeTo("slow", 1);
+        }
+
+        function ShowMessage()
+        {
+            $('#MessageDialogModal').modal('show');
+        }
+
+        function ymetr() {
+            ym(41317194, 'reachGoal', 'e-sale');
+        }
+
+        function SendMessage()
+        {
+            var Name = document.getElementById('NameInput');
+            var Email = document.getElementById('EmailInput');
+            var Company = document.getElementById('CompanyInput');
+            var Text = document.getElementById('TextInput');
+            var Phone = document.getElementById('PhoneInput');
+
+            var prod = "";
+            var type = "";
+
+            Name.style.borderColor = "#e6e6e6";
+            Email.style.borderColor = "#e6e6e6";
+            Text.style.borderColor = "#e6e6e6";
+
+
+            if (Name.value.trim().length == 0)
+            {
+                Name.style.borderColor = "red";
+
+                return;
+            }
+
+            var reg = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
+
+            if (reg.test(Email.value.trim().toString().replace(/ /g, '').replace(',', '.')) == false) {
+                Email.style.borderColor = "red";
+
+                return;
+            }
+
+            if (Text.value.trim().length == 0){
+                Text.style.borderColor = "red";
+
+                return;
+            }
+
+            type = $('input[name="type"]:checked').val();
+
+            prod = $('input[name="prod"]:checked').val();
+
+            $('#MessageDialogModal').modal('hide');
+
+            alert('Спасибо за сообщение!');
+
+            Zovprofil.Service.SendMessage(Name.value.trim(), Email.value.trim(), Text.value.trim(), Phone.value.trim(), Company.value.trim(), type, prod, onSendMessage);
+        }
+
+        function onSendMessage(result)
+        {
+        }
+    </script>
+
+</head>
+<body>
+    <div class="header">
+        <div class="header-top">
+            <div class="header-top-logo">
+                <img src="/Images/logo-zov.png" style="height:30px;" />
+            </div>
+            <div class="header-top-cont">
+                <div class="numb" style="margin-right:20px">
+                    <a target="_blank" href="https://www.facebook.com/%D0%A1-%D0%9E%D0%9E%D0%9E-%D0%97%D0%9E%D0%92-%D0%9F%D1%80%D0%BE%D1%84%D0%B8%D0%BB%D1%8C-150153668848633/">
+                        <img src="/Images/icons8-facebook-30.png" class="img" />
+                    </a>
+                </div>
+                <div class="numb" style="margin-right:20px">
+                    <a target="_blank" href="https://www.instagram.com/zovprofil.by/">
+                        <img src="/Images/icons8-instagram-30.png" class="img" />
+                    </a>
+                </div>
+                <div class="numb">
+                    <img src="/Images/icons8-phone-30.png" class="img" />
+                    <span class="phonem">+375 (152) 60-81-63</span>
+                </div>
+                <a href="https://zovofficial.com/" onclick="ymetr()" target="_blank" style="margin-right:-4px;">
+                    <div class="shop noselect">
+                        <img src="/Images/cart.png" class="img" />
+                        <span class="but">Где купить</span>
+                    </div>
+                </a>
+                <div class="write noselect" style="margin:0" onclick="ShowMessage()">
+                    <img src="/Images/write_w.png" class="img" />
+                    <span class="but">НАПИСАТЬ</span>
+                </div>
+            </div>
+        </div>
+        <div class="noselect main-menu">
+            <div class="back">
+                <div class="back-cont">
+                    <a href="/Main" class="item">
+                        <div id="MainItem" runat="server" class="text">
+                            Главная
+                        </div>
+                    </a>                
+                    <a href="/Production" class="item">
+                        <div id="ProdItem" runat="server" class="text">
+                            Каталог
+                        </div>
+                    </a>
+                    <a href="/News"  class="item">
+                        <div id="NewsItem" runat="server" class="text">
+                            Новости
+                        </div>
+                    </a>
+                    <%--<a href="/Wheretobuy"  class="item">
+                        <div id="WhereItem" runat="server" class="text">
+                            Где купить?
+                        </div>
+                    </a>--%>
+                    <a href="/Downloads"  class="item">
+                        <div id="DownloadsItem" runat="server" class="text">
+                            Клиентам
+                        </div>
+                    </a>
+                    <a href="/About"  class="item">
+                        <div id="AboutItem" runat="server" class="text">
+                            О компании
+                        </div>
+                    </a>
+                    <a href="/Contacts"  class="item">
+                        <div id="ContactsItem" runat="server" class="text">
+                            Контакты
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <form id="MasterForm" runat="server">
+        <asp:ScriptManager runat="server" ID="ScriptManager1">
+            <Services>
+                <asp:ServiceReference Path="~/Service.asmx" />
+            </Services>
+        </asp:ScriptManager> 
+        <div id="MasterDiv" class="master-content">
+            <div id="Content" class="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="left">
+                <a href="/Production" style="display:block; margin-top:8px;">• Каталог</a>
+                <a href="/Contacts" style="display:block; margin-top:8px;">• Контакты</a>
+            </div>
+            <div class="center">
+                <div class="cont">
+                    <img src="https://zovofficial.com/catalog/view/theme/default/assets/svg/logo-white.svg"  style="height: 100px"/>
+                    <span class="f-text" style="padding-top:12px;">2022-2023 © ООО "ОМЦ-Профиль"</span>
+                </div>
+            </div>
+            <div class="right">
+                <span style="text-align:right; font-family:OpenSans-Semibold; color:white; font-size:14px;">Адрес фабрики и склада</span>
+                <span class="f-text" style="font-size:14px; padding-top:12px;">ул. Герасимовича, 1<br />230011 г. Гродно<br />Республика Беларусь</span>
+            </div>
+        </div>
+    </form>
+    <div class="modal fade" id="MessageDialogModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="font-family:OpenSans-Regular, sans-serif,  Arial;">
+        <div class="modal-dialog" runat="server" style="width:650px; height:525px; margin:120px auto;">
+            <div class="modal-content" runat="server" style="width:100%; height:100%;">
+                <div class="modal-cont">
+                    <div style="float:left">
+                        <span class="text-span">ФИО*</span>  
+                        <input id="NameInput" type="text" class="name-input" />
+                    </div>
+                    <div style="overflow:hidden; padding-left:20px;">
+                        <span class="text-span">Название компании</span>  
+                        <input id="CompanyInput" type="text" class="name-input" style="width:300px;" />
+                    </div>
+                    <div style="clear:left; margin-top:20px;">
+                        <div style="overflow:hidden; float:left">
+                            <span class="text-span">Email*</span>  
+                            <input id="EmailInput" type="text" class="name-input" style="width:300px;" />
+                        </div>
+                        <div style="overflow:hidden; padding-left:20px;">
+                            <span class="text-span">Телефон</span>  
+                            <input id="PhoneInput" type="text" class="name-input" />
+                        </div>
+                    </div>
+                    <div style="clear:left; margin-top:20px">
+                        <span class="text-span">Тип компании*</span>
+                        <div style="margin-top:10px;">
+                            <div style="float:left">
+                                <input type="radio" id="FRadio" name="type" value="F" checked="checked" />
+                                <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Физ. лицо</label>
+                            </div>
+                            <div style="float:left; margin-left:15px;">
+                                <input type="radio" id="RRadio" name="type" value="R" />
+                                <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Розница</label>
+                            </div>
+                            <div style="float:left; margin-left:15px;">
+                                <input type="radio" id="MRadio"  name="type" value="M"/>
+                                <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Мелкий опт</label>
+                            </div>
+                            <div style="float:left; margin-left:15px;">
+                                <input type="radio" id="KRadio"  name="type" value="K"/>
+                                <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Крупный опт</label>
+                            </div>
+                            <div style="float:left; margin-left:15px;">
+                                <input type="radio" id="DRadio"  name="type" value="D"/>
+                                <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Диз. студия</label>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div style="clear:left; margin-top:20px">
+                        <span class="text-span">Интересующая продукция*</span>
+                        <div style="margin-top:10px;">
+                            <div style="float:left">
+                                <input type="radio" id="PRadio" name="prod" value="P" checked="checked" />
+                                <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Профиль</label>
+                            </div>
+                            <div style="float:left; margin-left:15px;">
+                                <input type="radio" id="FrRadio" name="prod" value="Fr"/>
+                                <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Фасады</label>
+                            </div>
+                            <div style="float:left; margin-left:15px;">
+                                <input type="radio" id="MeRadio"  name="prod" value="Me"/>
+                                <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Мебель</label>
+                            </div>
+                            <div style="float:left; margin-left:15px;">
+                                <input type="radio" id="IRadio"  name="prod" value="I"/>
+                                <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Интерьерные панели</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear:left">
+                        <span style="display:block; margin-top:10px">Текст</span>
+                        <textarea id="TextInput" class="text-input"></textarea>
+                    </div>
+                    
+                    <div style="padding-top:15px; text-align:center; width:100%;">
+                        <div style="display:inline-block">
+                            <div id="SendButton" class="sendbutton" onclick="SendMessage()">Отправить</div>
+                            <span class="cancelbutton" onclick="$('#MessageDialogModal').modal('hide')">Отмена</span>
+                        </div>
+                    </div>
+                </div>              
+            </div>
+        </div>
+    </div>
+</body>
+</html>

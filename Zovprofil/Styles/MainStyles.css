@@ -1,0 +1,281 @@
+﻿.popover {
+    max-width:1000px;
+    border-radius:0px;
+}
+
+.popover-title {
+    display:none;
+}
+
+.ItemMenuText {
+        font-size:14px; padding-top:9px; padding-left:9px; display:inline-block; cursor:default;
+    }
+
+.ItemMenu { 
+    background-color:white;
+    border-style:none; 
+    font-size:16px;
+    width:100%;
+    font-size:16px; 
+    height:40px; 
+    width:100%;
+}
+
+.ItemMenu:hover {
+    background-color:rgb(250,250,250);
+}
+
+.RadioButton {
+    clear:left; height:20px; cursor:pointer;
+}
+
+.RadioCaption {
+    color:rgb(60,60,60); font-family:SegoeUIRegular; font-size:15px; display:inline-block; padding-left:8px;
+}
+
+.RadioChOutC {
+    height:20px; width:20px; border-radius:20px; border:1px solid rgb(100,200,240); float:left;
+}
+
+.RadioChInC {
+    height:8px; width:8px; border-radius:8px; background-color:rgb(100,200,240); margin-left:6px; margin-top:6px;
+}
+
+.RadioNOutC {
+    height:20px; width:20px; border-radius:20px; border:1px solid rgb(220,220,220); float:left;
+}
+
+.RadioNInC {
+    height:8px; width:8px; border-radius:8px; background-color:rgb(220,220,220); margin-left:6px; margin-top:6px;
+}
+
+.FileNameLabel {
+        font-size:14px; display:inline-block; padding-top:7px; padding-left:5px; color:rgb(60,60,60);
+    }
+
+.FileItemDriveLink {
+    font-size:14px; margin-left:5px; color:rgb(56,184,238); text-decoration:underline
+}
+
+.ImagePanel {
+    clear:left; border-width:1px; border-style:solid; border-color:rgb(220,220,220); padding:1px; 
+    line-height:76px; text-align:center; vertical-align:middle; width:82px; height:82px; cursor:pointer;
+}
+
+.ImagePanel img {
+        vertical-align:middle;
+}
+
+.DropListItem {
+    height:40px; 
+    border-color:rgb(245,245,245); 
+    border-bottom-style:solid; 
+    border-width:1px; 
+    text-indent:7px; 
+    line-height:39px;
+    white-space:nowrap;
+    word-wrap:break-word;
+    text-overflow:ellipsis; 
+    overflow:hidden;
+    cursor:default;
+    display:block;
+    font-size:15px;
+    font-family:OpenSans-Semibold;
+
+    }
+
+    .DropListItem:hover {
+        background-color:rgb(250, 250, 250);
+    }
+
+    .OKButton {
+        color:white;
+        font-size:15px;
+        background-color:rgba(56,184,238,1);
+        border-style:none;
+        height:30px;
+        width:100px;
+    }
+
+    .OKButton:hover {
+        background-color:rgba(29,171,225,1);
+        cursor:pointer;
+    }
+
+    .CancelButton {
+        color:white;
+        font-size:15px;
+        background-color:rgba(170,170,170,1);
+        border-style:none;
+        height:30px;
+        width:100px;
+    }
+
+    .CancelButton:hover {
+        background-color:rgba(160,160,160,1);
+        cursor:pointer;
+    }
+
+    .OKSmallButton {
+        color:white;
+        font-size:14px;
+        background-color:rgba(56,184,238,1);
+        border-style:none;
+        height:25px;
+        width:70px;
+    }
+
+    .OKSmallButton:hover {
+        background-color:rgba(29,171,225,1);
+        cursor:pointer;
+    }
+
+    .CancelSmallButton {
+        color:white;
+        font-size:14px;
+        background-color:rgba(170,170,170,1);
+        border-style:none;
+        height:25px;
+        width:70px;
+    }
+
+    .CancelSmallButton:hover {
+        background-color:rgba(160,160,160,1);
+        cursor:pointer;
+    }
+
+    .OptionsButton {
+        color:white;
+        font-size:15px;
+        background-color:rgb(63,177,35);
+        border-style:none;
+        height:30px;
+        width:120px;
+    }
+
+    .OptionsButton:hover {
+        background-color:rgb(43,165,13);
+        cursor:pointer;
+    }
+
+    .EditButtons:hover {
+        background-color:rgb(250,250,250)!important;
+    }
+
+    .tooltip-inner {
+      max-width: 250px;
+      padding: 3px 8px;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      background-color: rgb(130,130,130);
+      border-radius: 4px;
+    }
+
+    .tooltip.top .tooltip-arrow {
+
+      border-top-color: rgb(130,130,130);
+    }
+    .tooltip.top-left .tooltip-arrow {
+
+      border-top-color: rgb(130,130,130);
+    }
+    .tooltip.top-right .tooltip-arrow {
+      border-top-color: rgb(130,130,130);
+    }
+    .tooltip.right .tooltip-arrow {
+      border-right-color: rgb(130,130,130);
+    }
+    .tooltip.left .tooltip-arrow {
+      border-left-color: rgb(130,130,130);
+    }
+    .tooltip.bottom .tooltip-arrow {
+      border-bottom-color: rgb(130,130,130);
+    }
+    .tooltip.bottom-left .tooltip-arrow {
+      border-bottom-color: rgb(130,130,130);
+    }
+    .tooltip.bottom-right .tooltip-arrow {
+        border-bottom-color: rgb(130,130,130);
+    }
+
+
+
+    /* font-family: "SegoeUIRegular"; */
+@font-face {
+    font-family: "SegoeUIRegular";
+    src: url("../../Fonts/SegoeUIRegular/SegoeUIRegular.eot");
+    src: url("../../Fonts/SegoeUIRegular/SegoeUIRegular.eot?#iefix")format("embedded-opentype"),
+    url("../../Fonts/SegoeUIRegular/SegoeUIRegular.woff") format("woff"),
+    url("../../Fonts/SegoeUIRegular/SegoeUIRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "SegoeUIBold"; */
+@font-face {
+    font-family: "SegoeUIBold";
+    src: url("../fonts/SegoeUIBold/SegoeUIBold.eot");
+    src: url("../fonts/SegoeUIBold/SegoeUIBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/SegoeUIBold/SegoeUIBold.woff") format("woff"),
+    url("../fonts/SegoeUIBold/SegoeUIBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "SegoeUIItalic"; */
+@font-face {
+    font-family: "SegoeUIItalic";
+    src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot");
+    src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/SegoeUIItalic/SegoeUIItalic.woff") format("woff"),
+    url("../fonts/SegoeUIItalic/SegoeUIItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "SegoeUILight"; */
+@font-face {
+    font-family: "SegoeUILight";
+    src: url("../../fonts/SegoeUILight/SegoeUILight.eot");
+    src: url("../fonts/SegoeUILight/SegoeUILight.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/SegoeUILight/SegoeUILight.woff") format("woff"),
+    url("../fonts/SegoeUILight/SegoeUILight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "SegoeUISemiBold"; */
+@font-face {
+    font-family: "SegoeUISemiBold";
+    src: url("../fonts/SegoeUISemiBold/SegoeUISemiBold.eot");
+    src: url("../fonts/SegoeUISemiBold/SegoeUISemiBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/SegoeUISemiBold/SegoeUISemiBold.woff") format("woff"),
+    url("../fonts/SegoeUISemiBold/SegoeUISemiBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/*@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(http://fonts.gstatic.com/s/lato/v11/UyBMtLsHKBKXelqf4x7VRQ.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}*/
+
+@font-face {
+    font-family: "OpenSans-Light";
+    src: url("../../fonts/OpenSans/OpenSans-Light.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "OpenSans-Semibold";
+    src: url("../../fonts/OpenSans/OpenSans-Semibold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "OpenSans-Bold";
+    src: url("../../fonts/OpenSans/OpenSans-Bold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "OpenSans-Regular";
+    src: url("../../fonts/OpenSans/OpenSans-Regular.ttf") format('truetype');
+}
