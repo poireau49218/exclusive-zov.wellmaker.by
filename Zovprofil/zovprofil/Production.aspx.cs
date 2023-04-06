@@ -145,7 +145,11 @@ namespace Zovprofil.zovprofil
                 foreach (DataRow Row in ProductsDT.Rows)
                 {
                     ProductItem Item = (ProductItem)Page.LoadControl("~/zovprofil/Controls/ProductItem.ascx");
-                    Item.Name = Row["Name"].ToString() + "</br>" + Row["Color"].ToString();
+
+                    string pCategory = Category.Replace("Эксклюзив ZOV: ", "").ToLower();
+                    pCategory = char.ToUpper(pCategory[0]) + pCategory.Substring(1);
+
+                    Item.Name = Row["Name"].ToString().Replace(pCategory, pCategory + "</br>") + "</br>" + Row["Color"].ToString();
                     Item.ProductImageUrl = Catalog.URL + "Thumbs/" + Row["FileName"].ToString();
 
                     Item.URL = "/Production?type=" + Type + "&cat=" + Category + "&item=" + Row["ImageID"].ToString();
