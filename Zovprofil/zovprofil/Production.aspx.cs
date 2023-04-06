@@ -223,7 +223,7 @@ namespace Zovprofil.zovprofil
                 FillProductSlider(sFileName, sTechStoreFile, bool.Parse(sBasic), Type);
                 string pCategory = sCategory.Replace("Эксклюзив ZOV: ", "").ToLower();
                 pCategory = char.ToUpper(pCategory[0]) + pCategory.Substring(1);
-                ProductItemName.InnerHtml = sName.Replace(pCategory, pCategory + "</br>");
+                ProductItemName.InnerHtml = sName.Replace(pCategory, pCategory + "</br>") + "</br>" + sColor;
 
                 Description.InnerHtml = sDescription.Replace("\n", "<br />");
                 Material.InnerHtml = sMaterial.Replace("\n", "<br />");
@@ -243,11 +243,9 @@ namespace Zovprofil.zovprofil
                 bool haveDecors = false;
                 foreach (DataRow Row in ProductsDT.Rows)
                 {
-                    
-
                     ProductItem Item = (ProductItem)Page.LoadControl("~/zovprofil/Controls/ProductItem.ascx");
 
-                    Item.Name = Row["Name"].ToString().ToUpper() + " " + Row["Color"].ToString();
+                    Item.Name = Row["Name"].ToString().ToUpper() + "</br>" + Row["Color"].ToString();
                     Item.ProductImageUrl = Catalog.URL + "Thumbs/" + Row["FileName"].ToString();
                     Item.URL = "/Production?type=" + 1 + "&cat=" + Row["Category"] + "&item=" + Row["ImageID"].ToString();
 
@@ -267,7 +265,7 @@ namespace Zovprofil.zovprofil
 
                     ProductItem Item = (ProductItem)Page.LoadControl("~/zovprofil/Controls/ProductItem.ascx");
 
-                    Item.Name = Row["Name"].ToString()/*.ToUpper()*/ + " " + sColor.ToString();
+                    Item.Name = Row["Name"].ToString().Replace(Row["Category"].ToString(), Row["Category"].ToString() + "</br>") + "</br>" + sColor.ToString();
                     Item.ProductImageUrl = Catalog.URL + "Thumbs/" + Row["FileName"].ToString();
                     Item.URL = "/Production?type=" + 0 + "&cat=" + Row["Category"] + "&item=" + Row["ImageID"].ToString();
 
