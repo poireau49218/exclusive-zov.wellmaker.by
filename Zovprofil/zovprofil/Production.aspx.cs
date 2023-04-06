@@ -240,24 +240,22 @@ namespace Zovprofil.zovprofil
 
                 DataTable ProductsDT = Catalog.FillRelatedDecors(sMatrixID);
                 
-                if (sBasic == "True")
+                if (sProductType == "0")
                     NotBasicFrontsDiv.Style["display"] = "block";
 
                 bool haveDecors = false;
                 foreach (DataRow Row in ProductsDT.Rows)
                 {
-                    //if (sColor == Row["Color"].ToString())
-                    //{
-                        ProductItem Item = (ProductItem)Page.LoadControl("~/zovprofil/Controls/ProductItem.ascx");
+                    ProductItemName.Style["color"] = Catalog.notExclusiveFontColor;
+                    ProductItem Item = (ProductItem)Page.LoadControl("~/zovprofil/Controls/ProductItem.ascx");
 
-                        Item.Name = Row["Name"].ToString().ToUpper() + " " + Row["Color"].ToString();
-                        Item.ProductImageUrl = Catalog.URL + "Thumbs/" + Row["FileName"].ToString();
-                        Item.URL = "/Production?type=" + 1 + "&cat=" + Row["Category"] + "&item=" + Row["ImageID"].ToString();
+                    Item.Name = Row["Name"].ToString().ToUpper() + " " + Row["Color"].ToString();
+                    Item.ProductImageUrl = Catalog.URL + "Thumbs/" + Row["FileName"].ToString();
+                    Item.URL = "/Production?type=" + 1 + "&cat=" + Row["Category"] + "&item=" + Row["ImageID"].ToString();
 
-                        RelatedDecors.Controls.Add(Item);
+                    RelatedDecors.Controls.Add(Item);
 
-                        haveDecors = true;
-                    //}
+                    haveDecors = true;
                 }
 
                 if (haveDecors)
@@ -266,15 +264,18 @@ namespace Zovprofil.zovprofil
                 DataTable NotBasicDT = Catalog.FillNotBasicFronts(sMatrixID);
                 foreach (DataRow Row in NotBasicDT.Rows)
                 {
-                        ProductItem Item = (ProductItem)Page.LoadControl("~/zovprofil/Controls/ProductItem.ascx");
+                    if (Row["ImageID"].ToString() == ItemID)
+                        continue;
 
-                        Item.Name = Row["Name"].ToString()/*.ToUpper()*/ + " " + sColor.ToString();
-                        Item.ProductImageUrl = Catalog.URL + "Thumbs/" + Row["FileName"].ToString();
-                        Item.URL = "/Production?type=" + 0 + "&cat=" + Category + "&item=" + Row["ImageID"].ToString();
+                    ProductItem Item = (ProductItem)Page.LoadControl("~/zovprofil/Controls/ProductItem.ascx");
+
+                    Item.Name = Row["Name"].ToString()/*.ToUpper()*/ + " " + sColor.ToString();
+                    Item.ProductImageUrl = Catalog.URL + "Thumbs/" + Row["FileName"].ToString();
+                    Item.URL = "/Production?type=" + 0 + "&cat=" + Category + "&item=" + Row["ImageID"].ToString();
 
                         
 
-                        NotBasicFronts.Controls.Add(Item);
+                    NotBasicFronts.Controls.Add(Item);
                 }
                 //ProductItem.ID = sFileName;
             }

@@ -150,22 +150,22 @@ namespace Zovprofil.zovprofil
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl FrontSliderNavCont;
 
         /// <summary>
-        /// MaterialDiv элемент управления.
+        /// DescriptionDiv элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl MaterialDiv;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DescriptionDiv;
 
         /// <summary>
-        /// Material элемент управления.
+        /// Description элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Material;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Description;
 
         /// <summary>
         /// SizesDiv элемент управления.
@@ -186,22 +186,22 @@ namespace Zovprofil.zovprofil
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Sizes;
 
         /// <summary>
-        /// DescriptionDiv элемент управления.
+        /// MaterialDiv элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DescriptionDiv;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl MaterialDiv;
 
         /// <summary>
-        /// Description элемент управления.
+        /// Material элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Description;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Material;
 
         /// <summary>
         /// NotBasicFrontsDiv элемент управления.

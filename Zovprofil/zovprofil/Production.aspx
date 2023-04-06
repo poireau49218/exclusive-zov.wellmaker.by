@@ -54,16 +54,16 @@
                         <img src="/Images/right.png" style="margin-top: 21px; float: right; margin-right: 15px;" />
                     </a>
                 </div>
-                <a href="https://zovofficial.com/" onclick="ymetr()" target="_blank" style="margin-right:-4px;">
+                <%--<a href="https://zovofficial.com/" onclick="ymetr()" target="_blank" style="margin-right:-4px;">
                     <div class="shopc noselect">
                         <img src="/Images/cart.png" class="img" />
                         <span class="but">Где купить</span>
                     </div>
-                </a>
+                </a>--%>
             </div>
             <div style="display:inline-block; width:680px; text-align:left">
                 <div id="ProductItemCont" runat="server">
-                    <span id="ProductItemName" runat="server" style="color: #9e1532"></span>
+                    <span id="ProductItemName" runat="server" style="color: black"></span>
 
 
                     <%--<div class="image-div">
@@ -88,21 +88,19 @@
                         </div>
                     </div>
 
-                    <div class="prod-item-inf">
-                        <div id="MaterialDiv" runat="server">
-                            <span class="head" style="font-weight: bold">Материал:</span>
-                            <span class="text" id="Material" runat="server"></span>
+                    <div class="prod-item-inf">               
+                        <div id="DescriptionDiv" runat="server" style="padding-top:30px;">
+                            <span class="head" style="font-weight: bold">Описание:</span>
+                            <span id="Description" runat="server" class="text"></span>
                         </div>
                         <div id="SizesDiv" runat="server" style="padding-top:30px;">
                             <span class="head" style="font-weight: bold">Размеры:</span>
                             <span id="Sizes" runat="server" class="text"></span>
                         </div>
-                        <div id="DescriptionDiv" runat="server" style="padding-top:30px;">
-                            <span class="head" style="font-weight: bold">Описание:</span>
-                            <span id="Description" runat="server" class="text"></span>
-                        </div>
-                        
-                        
+                        <div id="MaterialDiv" runat="server">
+                            <span class="head" style="font-weight: bold">Материал:</span>
+                            <span class="text" id="Material" runat="server"></span>
+                        </div>                     
                         <%--<button><a id="Buy_Product" href="#" runat="server" >BUY</a></button>--%>
                     </div>
 

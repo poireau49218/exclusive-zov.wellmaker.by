@@ -66,15 +66,16 @@ namespace Zovprofil
 
     public class Catalog
     {
-        public static string ConnectionString = "Data Source=localhost;Initial Catalog=infiniu2_catalog;Persist Security Info=True;Connection Timeout=30;User ID=infiniu2_infinium;Password=InF476()*";
-        public static string ftpPath = "ftp://localhost/Documents/TechStoreDocuments/";
+        //public static string ConnectionString = "Data Source=localhost;Initial Catalog=infiniu2_catalog;Persist Security Info=True;Connection Timeout=30;User ID=infiniu2_infinium;Password=InF476()*";
+        //public static string ftpPath = "ftp://localhost/Documents/TechStoreDocuments/";
 
-        //public static string ConnectionString = "Data Source=185.204.118.40, 32433;Initial Catalog=infiniu2_catalog;Persist Security Info=True;Connection Timeout=30;User ID=infiniu2_infinium;Password=InF476()*";
-        //public static string ftpPath = "ftp://infinium.zovprofil.by/Documents/TechStoreDocuments/";
+        public static string ConnectionString = "Data Source=185.204.118.40, 32433;Initial Catalog=infiniu2_catalog;Persist Security Info=True;Connection Timeout=30;User ID=infiniu2_infinium;Password=InF476()*";
+        public static string ftpPath = "ftp://infinium.zovprofil.by/Documents/TechStoreDocuments/";
 
 
         public static string URL = "https://zovprofil.by/Images/ClientsCatalogImages/";
 
+        public static string notExclusiveFontColor = "#336600";
 
         public static DataTable FillCategories(int Type)
         {
@@ -286,7 +287,7 @@ namespace Zovprofil
                                     "AND ClientsCatalogFrontsConfig.InsetTypeID = FrontsConfig.InsetTypeID " +
                             "INNER JOIN ClientsCatalogImages " +
                                 "ON ClientsCatalogFrontsConfig.ConfigID = ClientsCatalogImages.ConfigID " +
-                            "WHERE CollectionsConfig.ConfigId1 = @MatrixID AND Basic = 0 AND ProductType = 0 AND ToSite = 1";
+                            "WHERE CollectionsConfig.ConfigId1 = @MatrixID AND Basic = 0 AND ProductType = 0 AND ToSite = 1 AND CollectionsConfig.ConfigId2 <> @MatrixID";
 
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
@@ -358,10 +359,10 @@ namespace Zovprofil
                 using (DataTable DT = new DataTable())
                 {
                     if (DA.Fill(DT) == 0)
-                        return null;
+                        return "Заглушка.jpg";
 
                     if (DT.Rows[0]["FileName"] == DBNull.Value)
-                        return null;
+                        return "Заглушка.jpg";
 
                     string FileName = DT.Rows[0]["FileName"].ToString();
 
