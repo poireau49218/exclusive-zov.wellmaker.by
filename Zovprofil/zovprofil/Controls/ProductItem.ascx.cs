@@ -12,12 +12,16 @@ namespace Zovprofil.zovprofil.Controls
         public string Name = "";
         public string ProductImageUrl = "";
         public string URL = "";
+        public string FrontColor = Catalog.ExclusiveFontColor;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             ProdImage.Src = ProductImageUrl;
             ProdCategory.InnerHtml = Name;
             Link.HRef = URL;
+            if (!URL.Contains("Эксклюзив") && URL.Contains("/Production?type=0"))
+                FrontColor = Catalog.notExclusiveFontColor;
+            ProdCategory.Style["color"] = FrontColor;
         }
     }
 }

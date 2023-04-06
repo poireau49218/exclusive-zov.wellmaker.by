@@ -216,11 +216,8 @@ namespace Zovprofil.zovprofil
                     MaterialDiv.Visible = false;
                 if (sSizes.Length == 0)
                     SizesDiv.Visible = false;
-                //if (sBasic == "True")
-                //    NotBasicFrontsDiv.Style["display"] = "block";
-                    //NotBasicFrontsDiv.Visible = false;
-
-
+                if (!sCategory.Contains("Эксклюзив") && sProductType == "0")
+                    ProductItemName.Style["color"] = Catalog.notExclusiveFontColor;
 
                 string sTechStoreFile = Catalog.GetTechStoreImage(Convert.ToInt32(sTechID));
                 FillProductSlider(sFileName, sTechStoreFile, bool.Parse(sBasic), Type);
@@ -241,12 +238,13 @@ namespace Zovprofil.zovprofil
                 DataTable ProductsDT = Catalog.FillRelatedDecors(sMatrixID);
                 
                 if (sProductType == "0")
-                    NotBasicFrontsDiv.Style["display"] = "block";
+                    NotBasicFrontsDiv.Style["display"] = "block";                
 
                 bool haveDecors = false;
                 foreach (DataRow Row in ProductsDT.Rows)
                 {
-                    ProductItemName.Style["color"] = Catalog.notExclusiveFontColor;
+                    
+
                     ProductItem Item = (ProductItem)Page.LoadControl("~/zovprofil/Controls/ProductItem.ascx");
 
                     Item.Name = Row["Name"].ToString().ToUpper() + " " + Row["Color"].ToString();
@@ -271,13 +269,10 @@ namespace Zovprofil.zovprofil
 
                     Item.Name = Row["Name"].ToString()/*.ToUpper()*/ + " " + sColor.ToString();
                     Item.ProductImageUrl = Catalog.URL + "Thumbs/" + Row["FileName"].ToString();
-                    Item.URL = "/Production?type=" + 0 + "&cat=" + Category + "&item=" + Row["ImageID"].ToString();
-
-                        
+                    Item.URL = "/Production?type=" + 0 + "&cat=" + Row["Category"] + "&item=" + Row["ImageID"].ToString();
 
                     NotBasicFronts.Controls.Add(Item);
                 }
-                //ProductItem.ID = sFileName;
             }
             else
             {

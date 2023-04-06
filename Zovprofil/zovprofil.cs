@@ -75,7 +75,8 @@ namespace Zovprofil
 
         public static string URL = "https://zovprofil.by/Images/ClientsCatalogImages/";
 
-        public static string notExclusiveFontColor = "#336600";
+        public static string notExclusiveFontColor = "#008000";
+        public static string ExclusiveFontColor = "black";
 
         public static DataTable FillCategories(int Type)
         {
