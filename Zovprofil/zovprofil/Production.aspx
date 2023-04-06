@@ -89,7 +89,7 @@
                     </div>
 
                     <div class="prod-item-inf">               
-                        <div id="DescriptionDiv" runat="server" style="padding-top:30px;">
+                        <div id="DescriptionDiv" runat="server">
                             <span class="head" style="font-weight: bold">Описание:</span>
                             <span id="Description" runat="server" class="text"></span>
                         </div>
@@ -97,7 +97,7 @@
                             <span class="head" style="font-weight: bold">Размеры:</span>
                             <span id="Sizes" runat="server" class="text"></span>
                         </div>
-                        <div id="MaterialDiv" runat="server">
+                        <div id="MaterialDiv" runat="server" style="padding-top:30px;">
                             <span class="head" style="font-weight: bold">Материал:</span>
                             <span class="text" id="Material" runat="server"></span>
                         </div>                     

@@ -179,11 +179,20 @@ namespace Zovprofil
         // Возвращает MatrixID фасада по ConfigID из таблицы ClientCatalogImages
         public static void GetMatrixIdFromConfID(int ConfigID, ref int MatrixID)
         {
-            string Select = "SELECT TOP(1) MatrixID " +
-                            "FROM [infiniu2_catalog].[dbo].[FrontsConfig] AS FC " +
-                            "LEFT JOIN [infiniu2_catalog].[dbo].[ClientsCatalogFrontsConfig] AS CCFC ON FC.FrontID = CCFC.FrontID AND FC.ColorID = CCFC.ColorID AND FC.PatinaID = CCFC.PatinaID " +
-                            "LEFT JOIN [infiniu2_catalog].[dbo].[ClientsCatalogImages] AS CCI ON CCFC.ConfigID = CCI.ConfigID " +
-                            "WHERE CCI.ConfigID = @configid AND ToSite = 1";
+            //string Select = "SELECT TOP(1) MatrixID " +
+            //                "FROM [infiniu2_catalog].[dbo].[FrontsConfig] AS FC " +
+            //                "LEFT JOIN [infiniu2_catalog].[dbo].[ClientsCatalogFrontsConfig] AS CCFC ON FC.FrontID = CCFC.FrontID AND FC.ColorID = CCFC.ColorID AND FC.PatinaID = CCFC.PatinaID " +
+            //                "LEFT JOIN [infiniu2_catalog].[dbo].[ClientsCatalogImages] AS CCI ON CCFC.ConfigID = CCI.ConfigID " +
+            //                "WHERE CCI.ConfigID = @configid AND ToSite = 1";
+
+            string Select = "SELECT MatrixId " +
+                            "FROM [infiniu2_catalog].[dbo].[FrontsConfig] as FC " +
+                            "LEFT JOIN [ClientsCatalogFrontsConfig] AS CCF " +
+                                "ON CCF.FrontID = FC.FrontID " +
+                                "AND CCF.InsetTypeID = FC.InsetTypeID " +
+                                "AND CCF.ColorID = FC.ColorID " +
+                                "AND CCF.PatinaID = FC.PatinaID " +
+                            "WHERE ConfigID = @configid";
 
             using (SqlConnection conn = new SqlConnection(ConnectionString))
             {
@@ -288,7 +297,7 @@ namespace Zovprofil
                                     "AND ClientsCatalogFrontsConfig.InsetTypeID = FrontsConfig.InsetTypeID " +
                             "INNER JOIN ClientsCatalogImages " +
                                 "ON ClientsCatalogFrontsConfig.ConfigID = ClientsCatalogImages.ConfigID " +
-                            "WHERE CollectionsConfig.ConfigId1 = @MatrixID AND Basic = 0 AND ProductType = 0 AND ToSite = 1 AND CollectionsConfig.ConfigId2 <> @MatrixID";
+                            "WHERE CollectionsConfig.ConfigId1 = @MatrixID AND ProductType = 0 AND ToSite = 1 AND CollectionsConfig.ConfigId2 <> @MatrixID";
 
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {

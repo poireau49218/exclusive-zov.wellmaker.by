@@ -220,7 +220,7 @@ namespace Zovprofil.zovprofil
                     MaterialDiv.Visible = false;
                 if (sSizes.Length == 0)
                     SizesDiv.Visible = false;
-                if (!sCategory.Contains("Эксклюзив") && sProductType == "0")
+                if (!sCategory.Contains("Эксклюзив"))
                     ProductItemName.Style["color"] = Catalog.notExclusiveFontColor;
 
                 string sTechStoreFile = Catalog.GetTechStoreImage(Convert.ToInt32(sTechID));
@@ -262,6 +262,7 @@ namespace Zovprofil.zovprofil
                     RelatedDecorsDiv.Style["display"] = "block";
 
                 DataTable NotBasicDT = Catalog.FillNotBasicFronts(sMatrixID);
+
                 foreach (DataRow Row in NotBasicDT.Rows)
                 {
                     if (Row["ImageID"].ToString() == ItemID)

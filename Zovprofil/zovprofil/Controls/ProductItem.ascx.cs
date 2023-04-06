@@ -19,7 +19,7 @@ namespace Zovprofil.zovprofil.Controls
             ProdImage.Src = ProductImageUrl;
             ProdCategory.InnerHtml = Name;
             Link.HRef = URL;
-            if (!URL.Contains("Эксклюзив") && URL.Contains("/Production?type=0"))
+            if (!URL.Contains("Эксклюзив"))
                 FrontColor = Catalog.notExclusiveFontColor;
             ProdCategory.Style["color"] = FrontColor;
         }
