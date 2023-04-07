@@ -66,11 +66,11 @@ namespace Zovprofil
 
     public class Catalog
     {
-        public static string ConnectionString = "Data Source=localhost;Initial Catalog=infiniu2_catalog;Persist Security Info=True;Connection Timeout=30;User ID=infiniu2_infinium;Password=InF476()*";
-        public static string ftpPath = "ftp://localhost/Documents/TechStoreDocuments/";
+        //    public static string ConnectionString = "Data Source=localhost;Initial Catalog=infiniu2_catalog;Persist Security Info=True;Connection Timeout=30;User ID=infiniu2_infinium;Password=InF476()*";
+        //    public static string ftpPath = "ftp://localhost/Documents/TechStoreDocuments/";
 
-        //public static string ConnectionString = "Data Source=185.204.118.40, 32433;Initial Catalog=infiniu2_catalog;Persist Security Info=True;Connection Timeout=30;User ID=infiniu2_infinium;Password=InF476()*";
-        //public static string ftpPath = "ftp://infinium.zovprofil.by/Documents/TechStoreDocuments/";
+        public static string ConnectionString = "Data Source=185.204.118.40, 32433;Initial Catalog=infiniu2_catalog;Persist Security Info=True;Connection Timeout=30;User ID=infiniu2_infinium;Password=InF476()*";
+        public static string ftpPath = "ftp://infinium.zovprofil.by/Documents/TechStoreDocuments/";
 
 
         public static string URL = "https://zovprofil.by/Images/ClientsCatalogImages/";
@@ -375,10 +375,16 @@ namespace Zovprofil
                         return "Заглушка.jpg";
 
                     string FileName = DT.Rows[0]["FileName"].ToString();
+                    string FileSize = DT.Rows[0]["FileSize"].ToString();
+                    string FilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images\\TechStore", FileName);
 
-                    if (File.Exists(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images\\TechStore", FileName)))
+                    FileInfo fi = new FileInfo(FilePath);
+
+                    if (File.Exists(FilePath) && fi.Length == Convert.ToInt32(FileSize))
                         return FileName;
 
+                    if (File.Exists(FilePath))
+                        File.Delete(FilePath);
                     try
                     {
                         string savePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images\\TechStore", FileName);
