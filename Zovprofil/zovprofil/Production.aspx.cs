@@ -241,7 +241,7 @@ namespace Zovprofil.zovprofil
 
                 DataTable ProductsDT = Catalog.FillRelatedDecors(sMatrixID);
                 
-                if (sProductType == "0")
+                if (sProductType == "0" && ProductsDT.Rows.Count > 0)
                     NotBasicFrontsDiv.Style["display"] = "block";                
 
                 bool haveDecors = false;
