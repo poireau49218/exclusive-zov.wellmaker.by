@@ -360,7 +360,8 @@ namespace Zovprofil.zovprofil
                 if (i == 1) 
                 {
                     img.Attributes.Add("src", "/Images/TechStore/" + TechStoreFile);
-                    sliderUrls += "/Images/TechStore/" + TechStoreFile.ToString() + ";";                    
+                    sliderUrls += "/Images/TechStore/" + TechStoreFile.ToString() + ";";
+                    img.Attributes.Add("cache-control", "no-cache");
                 }
                 else
                 {
