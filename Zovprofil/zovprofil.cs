@@ -297,7 +297,7 @@ namespace Zovprofil
                                     "AND ClientsCatalogFrontsConfig.InsetTypeID = FrontsConfig.InsetTypeID " +
                             "INNER JOIN ClientsCatalogImages " +
                                 "ON ClientsCatalogFrontsConfig.ConfigID = ClientsCatalogImages.ConfigID " +
-                            "WHERE CollectionsConfig.ConfigId1 = @MatrixID AND ProductType = 0 AND ToSite = 1 AND CollectionsConfig.ConfigId2 <> @MatrixID";
+                            "WHERE CollectionsConfig.ConfigId1 = @MatrixID AND ProductType = 0 AND ToSite = 1";
 
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
