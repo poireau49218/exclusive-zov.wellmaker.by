@@ -241,12 +241,8 @@ namespace Zovprofil.zovprofil
 
                 DataTable ProductsDT = Catalog.FillRelatedDecors(sMatrixID);
 
-                MessageBox.Show(ProductsDT.Rows.Count.ToString());            
 
                 bool haveDecors = false;
-
-                MessageBox.Show(sMatrixID.ToString());
-
                 foreach (DataRow Row in ProductsDT.Rows)
                 {
                     ProductItem Item = (ProductItem)Page.LoadControl("~/zovprofil/Controls/ProductItem.ascx");
@@ -260,15 +256,16 @@ namespace Zovprofil.zovprofil
                     haveDecors = true;
                 }
 
-                //if (haveDecors)
+                if (haveDecors)
                     RelatedDecorsDiv.Style["display"] = "block";
 
                 DataTable NotBasicDT = Catalog.FillNotBasicFronts(sMatrixID);
-                MessageBox.Show(sPatinaID);
 
                 if (sProductType == "0" && NotBasicDT.Rows.Count > 0)
                     NotBasicFrontsDiv.Style["display"] = "block";
 
+
+                //MessageBox.Show(NotBasicDT.Rows.Count.ToString());
                 foreach (DataRow Row in NotBasicDT.Rows)
                 {
                     if (Row["ImageID"].ToString() == ItemID)
@@ -334,7 +331,8 @@ namespace Zovprofil.zovprofil
                         ImagesSliderCont.Controls.Add(img);
 
                         sliderNames += MainSliderDT.Rows[i]["Name"].ToString() + ";";
-                        sliderUrls += MainSliderDT.Rows[i]["FileName"].ToString() + ";";
+                        //sliderUrls += MainSliderDT.Rows[i]["FileName"].ToString() + ";";
+                        sliderUrls += Catalog.URL + MainSliderDT.Rows[i]["FileName"].ToString() + ";";
                     }
 
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "SetSliderNames", "SetSliderNames('" + sliderNames + "');", true);

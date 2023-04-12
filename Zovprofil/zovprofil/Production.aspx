@@ -209,7 +209,7 @@
     function OpenSliderImage() {
         $('#ImageDialogModal').modal('show');
 
-        document.getElementById('ItemImage').src = '/Images/ClientsCatalogImages/' + SliderUrls[ci - 1];
+        document.getElementById('ItemImage').src = /*'/Images/ClientsCatalogImages/' + */SliderUrls[ci - 1];
     }
 
     function OpenFrontSliderImage() {
