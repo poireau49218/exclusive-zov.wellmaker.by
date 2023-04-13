@@ -189,9 +189,10 @@ namespace Zovprofil
                             "FROM [infiniu2_catalog].[dbo].[FrontsConfig] as FC " +
                             "LEFT JOIN [ClientsCatalogFrontsConfig] AS CCF " +
                                 "ON CCF.FrontID = FC.FrontID " +
-                                "AND CCF.InsetTypeID = FC.InsetTypeID " +
                                 "AND CCF.ColorID = FC.ColorID " +
+                                "AND CCF.InsetTypeID = FC.InsetTypeID " +
                                 "AND CCF.PatinaID = FC.PatinaID " +
+                                "AND CCF.InsetColorID = FC.InsetColorID " +
                             "WHERE ConfigID = @configid";
 
             using (SqlConnection conn = new SqlConnection(ConnectionString))
