@@ -146,12 +146,12 @@ namespace Zovprofil.zovprofil
                 {
                     ProductItem Item = (ProductItem)Page.LoadControl("~/zovprofil/Controls/ProductItem.ascx");
 
-                    string pCategory = Category.Replace("Эксклюзив ZOV: ", "").ToLower();
+                    string pCategory = Category.Replace("Эксклюзив ZOV: ", "");
+                    pCategory = pCategory.Replace("ЭП ", "").ToLower();
                     pCategory = char.ToUpper(pCategory[0]) + pCategory.Substring(1);
 
                     Item.Name = Row["Name"].ToString().Replace(pCategory, pCategory + "</br>") + "</br>" + Row["Color"].ToString();
                     Item.ProductImageUrl = Catalog.URL + "Thumbs/" + Row["FileName"].ToString();
-
                     Item.URL = "/Production?type=" + Type + "&cat=" + Category + "&item=" + Row["ImageID"].ToString();
 
                     ProductMenu.Controls.Add(Item);
@@ -225,8 +225,11 @@ namespace Zovprofil.zovprofil
 
                 string sTechStoreFile = Catalog.GetTechStoreImage(Convert.ToInt32(sTechID));
                 FillProductSlider(sFileName, sTechStoreFile, bool.Parse(sBasic), Type);
-                string pCategory = sCategory.Replace("Эксклюзив ZOV: ", "").ToLower();
+
+                string pCategory = sCategory.Replace("Эксклюзив ZOV: ", "");
+                pCategory = pCategory.Replace("ЭП ", "").ToLower();
                 pCategory = char.ToUpper(pCategory[0]) + pCategory.Substring(1);
+
                 ProductItemName.InnerHtml = sName.Replace(pCategory, pCategory + "</br>") + "</br>" + sColor;
 
                 Description.InnerHtml = sDescription.Replace("\n", "<br />");
@@ -273,7 +276,12 @@ namespace Zovprofil.zovprofil
 
                     ProductItem Item = (ProductItem)Page.LoadControl("~/zovprofil/Controls/ProductItem.ascx");
 
-                    Item.Name = Row["Name"].ToString().Replace(Row["Category"].ToString(), Row["Category"].ToString() + "</br>") + "</br>" + sColor.ToString();
+                    string nCategory = Row["Category"].ToString().Replace("Эксклюзив ZOV: ", "");
+                    nCategory = nCategory.Replace("ЭП ", "").ToLower();
+                    nCategory = nCategory.Replace(" ", "").ToLower();
+                    nCategory = char.ToUpper(nCategory[0]) + nCategory.Substring(1);
+
+                    Item.Name = Row["Name"].ToString().Replace(nCategory, nCategory + "</br>") + "</br>" + sColor.ToString();
                     Item.ProductImageUrl = Catalog.URL + "Thumbs/" + Row["FileName"].ToString();
                     Item.URL = "/Production?type=" + 0 + "&cat=" + Row["Category"] + "&item=" + Row["ImageID"].ToString();
 
