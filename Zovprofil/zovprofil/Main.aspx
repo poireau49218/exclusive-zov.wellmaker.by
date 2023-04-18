@@ -65,7 +65,7 @@
                 <div style="display:inline-block; text-align:center; width:307px;">
                     <span style="display:block; font-size:18px;">СРОК ПРОИЗВОДСТВА</span>
                     <img src="/Images/calendar-and-clock2.png" style="width:84px; display:inline-block; margin-top:20px;" />
-                    <span style="display:block; font-size:15px; margin-top:7px;">От 2-ух недель</span>
+                    <span style="display:block; font-size:15px; margin-top:7px;">от 2-х недель</span>
                 </div>
                 <div style="display:inline-block; text-align:center; width:307px;">
                     <div style="padding-left:100px;">
@@ -139,15 +139,15 @@
         <div style="display:inline-block;overflow:hidden;  width:295px; padding: 0 5px; height:380px; background-color:#eeeeee; margin-left:10px; margin-right:10px;">
             <img src="/Images/img_avatar.png" style="border-radius:50%; width:100px; margin-top:30px;" />
             <span style="display:block; margin-top:15px; font-size:21px; font-family:OpenSans-Semibold">Филипчик Алексей</span>
-            <span style="display:block; margin-top:10px; font-size:15px; font-family:OpenSans-Regular; color:#8e8e8e">специалист по маркетингу</span>
+            <span style="display:block; margin-top:10px; font-size:15px; font-family:OpenSans-Regular; color:#8e8e8e">ведущий специалист по маркетингу</span>
             <div style="margin-top:15px; ">
                 <span style="display:block; font-size:16px; font-family:OpenSans-Semibold; color:#41a271">RU, BY, EN</span>
             </div>
             <div style="margin-top:25px; ">
-                <span style="display:inline-block; font-size:16px; font-family:OpenSans-Semibold; color:#5a5a5a">+375 (29) 580-33-77</span>
+                <span style="display:inline-block; font-size:16px; font-family:OpenSans-Semibold; color:#5a5a5a">+375 (29) 155-58-90</span>
             </div>
             <div style="margin-top:7px; ">
-                <a href="mailto:marketing@zovprofil.by" style="color: #41a271; text-decoration:underline">marketing@zovprofil.by</a>
+                <a href="mailto:marketing@omcprofil.by" style="color: #41a271; text-decoration:underline">marketing@omcprofil.by</a>
             </div>
         </div>
         <div style="display:inline-block;overflow:hidden;  width:295px; height:380px; background-color:#eeeeee; margin-left:10px; margin-right:10px;">

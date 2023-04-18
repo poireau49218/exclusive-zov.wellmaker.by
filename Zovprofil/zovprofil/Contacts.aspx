@@ -39,7 +39,7 @@
                         <div style="font-size:22px; color:white; float:left; padding-top:13px;">Маркетинг</div>
                         <div style="float:right; padding-top:8px; text-align:left">
                             <span class="ind-h">e-mail:</span>
-                            <a href="mailto:marketing@zovprofil.by" style="font-size:15px; color:white; text-decoration:underline">marketing@zovprofil.by</a>
+                            <a href="mailto:marketing@omcprofil.by" style="font-size:15px; color:white; text-decoration:underline">marketing@omcprofil.by</a>
                             <div>
                                 <span class="ind-h">тел./факс:</span>
                                 <span class="phone-h">+375 (152) 60-81-63</span>
@@ -62,13 +62,13 @@
                         <div class="contacts-item">
                             <img src="/Images/img_avatar.png" style="border-radius:50%; width:100px; margin-top:30px;" />
                             <span class="name">Филипчик Алексей</span>
-                            <span class="n-de">специалист по маркетингу</span>
+                            <span class="n-de">ведущий специалист по маркетингу</span>
                             <div style="margin-top:15px; ">
                                 <span style="display:block; font-size:16px; font-family:OpenSans-Semibold; color:#41a271">EN</span>
                             </div>
                             <div style="margin-top:5px; ">
                                 <span class="ind">моб:</span>
-                                <span class="phone">+375 (29) 580-33-77</span>
+                                <span class="phone">+375 (29) 155-58-90</span>
                             </div>
                         </div>
 
@@ -79,7 +79,7 @@
                         <div style="font-size:22px; color:white; float:left; padding-top:13px;">Отдел продаж</div>
                         <div style="float:right; padding-top:8px; text-align:left">
                             <span class="ind-h">e-mail:</span>
-                            <a href="mailto:marketing@zovprofil.by" style="font-size:15px; color:white; text-decoration:underline">marketing@zovprofil.by</a>
+                            <a href="mailto:marketing@omcprofil.by" style="font-size:15px; color:white; text-decoration:underline">marketing@omcprofil.by</a>
                             <div>
                                 <span class="ind-h">тел./факс:</span>
                                 <span class="phone-h">+375 (152) 60-81-63</span>

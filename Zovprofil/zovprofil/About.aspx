@@ -52,7 +52,7 @@
 начали осваивать европейский рынок: Польша, Литва, Латвия, Эстония.<br /><br />
 Мы рады сотрудничеству с мебельными салонами, оптовыми организациями, интернет-
 магазинами, дизайнерами и другими заинтересованными юр. лицами. Пишите на нашу почту
-<a href="mailto:marketing@zovprofil.by" style="color:#659D91">marketing@zovprofil.by</a> с пометкой «СОТРУДНИЧЕСТВО».
+<a href="mailto:marketing@omcprofil.by" style="color:#659D91">marketing@omcprofil.by</a> с пометкой «СОТРУДНИЧЕСТВО».
 <br /><br /></span>
             <span class="cont-h">СРОК ПРОИЗВОДСТВА</span>
             <span class="cont-t">Фасады - от 1 до 3 недель 
