@@ -149,6 +149,7 @@ namespace Zovprofil.zovprofil
                     string pCategory = Category.Replace("Эксклюзив ZOV: ", "");
                     pCategory = pCategory.Replace("ЭП ", "").ToLower();
                     pCategory = char.ToUpper(pCategory[0]) + pCategory.Substring(1);
+                    pCategory = pCategory.Replace(" ", "");
 
                     Item.Name = Row["Name"].ToString().Replace(pCategory, pCategory + "</br>") + "</br>" + Row["Color"].ToString();
                     Item.ProductImageUrl = Catalog.URL + "Thumbs/" + Row["FileName"].ToString();
@@ -229,8 +230,11 @@ namespace Zovprofil.zovprofil
                 string pCategory = sCategory.Replace("Эксклюзив ZOV: ", "");
                 pCategory = pCategory.Replace("ЭП ", "").ToLower();
                 pCategory = char.ToUpper(pCategory[0]) + pCategory.Substring(1);
+                pCategory = pCategory.Replace(" ", "");
 
                 ProductItemName.InnerHtml = sName.Replace(pCategory, pCategory + "</br>") + "</br>" + sColor;
+
+                //MessageBox.Show(pCategory);
 
                 Description.InnerHtml = sDescription.Replace("\n", "<br />");
                 Material.InnerHtml = sMaterial.Replace("\n", "<br />");
