@@ -375,7 +375,7 @@ namespace Zovprofil.zovprofil
 
                 if (i == 1) 
                 {
-                    img.Attributes.Add("src", "/Images/TechStore/" + TechStoreFile);
+                    img.Attributes.Add("src", "/Images/TechStore/" + TechStoreFile + "?" + DateTime.Now.Ticks);
                     sliderUrls += "/Images/TechStore/" + TechStoreFile.ToString() + ";";
                     img.Attributes.Add("cache-control", "no-cache");
                 }
