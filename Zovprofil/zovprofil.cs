@@ -217,14 +217,14 @@ namespace Zovprofil
         // Создает таблицу декоров, связанных с фасадом с переданным MatrixID
         public static DataTable FillRelatedDecors(int matrixid)
         {
-            string Select = "SELECT [ImageID], [FileName], [ToSite], [Category], [Name], [Color], [Basic], MatrixId " +
+            string Select = "SELECT DISTINCT [ImageID], [FileName], [ToSite], [Category], [Name], [Color], [Basic] " +
                             "FROM CollectionsConfig " +
                             "INNER JOIN DecorConfig " +
                                 "ON CollectionsConfig.ConfigId2 = DecorConfig.MatrixID " +
                             "INNER JOIN ClientsCatalogDecorConfig " +
                                 "ON DecorConfig.DecorID = ClientsCatalogDecorConfig.DecorID " +
                                 "AND ClientsCatalogDecorConfig.ColorID = DecorConfig.ColorID " +
-                                "AND ClientsCatalogDecorConfig.PatinaID = DecorConfig.PatinaID " +
+                                "AND ClientsCatalogDecorConfig.PatinaID = DecorConfig.PatinaID " +                                                      
                             "INNER JOIN ClientsCatalogImages " +
                                 "ON ClientsCatalogDecorConfig.ConfigID = ClientsCatalogImages.ConfigID " +
                             "WHERE CollectionsConfig.ConfigId1 = @MatrixID AND ToSite = 1 and ProductType = 1 ORDER BY Category";
