@@ -267,7 +267,6 @@ namespace Zovprofil.zovprofil
                     RelatedDecorsDiv.Style["display"] = "block";
 
                 DataTable NotBasicDT = Catalog.FillNotBasicFronts(sMatrixID);
-                MessageBox.Show(sMatrixID.ToString());
 
                 if (sProductType == "0" && NotBasicDT.Rows.Count > 0)
                     NotBasicFrontsDiv.Style["display"] = "block";
