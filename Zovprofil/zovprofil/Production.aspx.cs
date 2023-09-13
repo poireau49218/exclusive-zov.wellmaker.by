@@ -69,6 +69,17 @@ namespace Zovprofil.zovprofil
                 //{
                 //    ReadyCat.Attributes.Add("class", "lmenu-cat selected");
                 //}
+
+                if (Type == 4)
+                {
+                    PromCat.Attributes.Add("class", "lmenu-cat selected");
+                }
+                if (Type == 5)
+                {
+                    InteriorCat.Attributes.Add("class", "lmenu-cat selected");
+                }
+
+
             }
 
             if (Category == "")
@@ -103,6 +114,18 @@ namespace Zovprofil.zovprofil
                     MainDescriptionDiv.Style.Add("display", "block");
                     MainDescriptionDiv.InnerHtml = "Выбирая корпусную мебель для гостиной или спальни, вы стараетесь придерживаться определенной стилистики.В нашем каталоге мебели можно выбрать как классические модели гостиных и стенок, так и ультра современные комплекты. Наши производственные возможности удивят вас широтой выбора и качеством продукции.";
                 }*/
+                if (Type == 4)
+                {
+                    ExpImagePromotion.Src = "/Images/up.png";
+                    MainDescriptionDiv.Style.Add("display", "block");
+                    MainDescriptionDiv.InnerHtml = "Представить широкий ассортимент нашей продукции в Вашем магазине или выставочном салоне помогут наши рекламные материалы. Среди всего разнообразия наших стендов, стоек, экспозиторов – Вы обязательно найдете то, что подойдёт именно Вашей торговой точке. На них Вы сможете разместить образцы наших фасадов декорэлементов и профилей. Не хватает места в салоне – не беда, специально для Вас мы разработали образцы с минимальными размерами в виде четвертинок фасадов и небольших планшетов с декроэлементами и профилями. Для работы дизайнеров на выезде у клиента мы предлагаем большой ассортимент образцов, которые могут быть укомплектованы удобными экспобоксами, которые облегчат работу с образцами и увеличат срок их службы. Классические рекламные продукты в виде каталогов и вееров облицовочного материала мы тоже рады Вам предоставить.";
+                }
+                if (Type == 5)
+                {
+                    ExpImageInterior.Src = "/Images/up.png";
+                    MainDescriptionDiv.Style.Add("display", "block");
+                    MainDescriptionDiv.InnerHtml = "Декоративные рейки в интерьере - современный прием для отделки стен и зонирования. В дизайне помещения рейки могут быть не только акцентным украшением, но и функциональным элементом.<br/>Как можно применить эту конструкцию для вашего интерьера?<br/><br/>1. Зонирование. В больших комнатах с помощью баффелей можно отгородить различные зоны: обеденную и “диванную” – в кухне-гостиной, работы и отдыха – в совмещенной с домашним офисом спальне и так далее. Особенно это решение пригодится в компактных квартирах-студиях: с его помощью можно обозначить в общем пространстве жилища уединенную зону спальни, при этом не лишив ее естественного освещения.<br/><br/>2. Перила. Рейки - отличная альтернатива классическим перилам в домах с лестницей: вертикальные панели на всю высоту пролета так же безопасны, но выглядят более стильно, современно и необычно. Такая лестница непременно станет центром всеобщего внимания и главным украшением вашего дома.<br/><br/>3. Двери. Декоративные планки могут заменить двери шкафов, гардеробных и систем хранения. Такой прием сейчас особенно популярен в лаконичных интерьерах современного стиля и минимализма.<br/><br/>4. Декор. С помощью ламелей можно оформить стены, придав им оригинальную фактуру и объем. Варианты в тон стены добавят глубины помещению в стиле минимализм, контрастные скорректируют геометрию комнаты, модели из дерева украсят интерьеры в экостиле, а металлические – в стиле лофт.<br/><br/>5. Эффектное освещение. При помощи реек можно сделать необычное освещение в интерьерах современного стиля, лофт и хай-тек, оформив лампы как элемент конструкции. Вытянутые светильники замаскировать среди планок. Также можно спрятать светодиодные ленты за баффелями, создав эффект “света изнутри”. Если при этом использовать разноцветную подсветку, она станет ярким элементом ваших вечеринок.";
+                }
             }
 
 
@@ -111,7 +134,9 @@ namespace Zovprofil.zovprofil
             {
                 LeftMenuItem Item = (LeftMenuItem)Page.LoadControl("~/zovprofil/Controls/LeftMenuItem.ascx");
                 Item.Name = Row["Category"].ToString().Replace("Эксклюзив ZOV: ", "").ToUpper();
-                Item.URL = "/Production?type=" + Type.ToString() + "&cat=" + Row["Category"].ToString();
+                //Item.URL = "/Production?type=" + Type.ToString() + "&cat=" + Row["Category"].ToString();
+                string encodedCategory = Uri.EscapeDataString(Row["Category"].ToString());
+                Item.URL = $"/Production?type={Type}&cat={encodedCategory}";
 
                 if (Category.Length > 0)
                     if (Item.Name == Category)
@@ -134,6 +159,15 @@ namespace Zovprofil.zovprofil
                 }*/
                 if (Type == 3)
                     ReadyContainer.Controls.Add(Item);
+
+                if (Type == 4)
+                {
+                    PromotionContainer.Controls.Add(Item);
+                }
+                if (Type == 5)
+                {
+                    InteriorContainer.Controls.Add(Item);
+                }
             }
 
             if (Category.Length > 0 && ItemID.Length == 0)
@@ -151,9 +185,19 @@ namespace Zovprofil.zovprofil
                     pCategory = char.ToUpper(pCategory[0]) + pCategory.Substring(1);
                     pCategory = pCategory.Replace(" ", "");
 
-                    Item.Name = Row["Name"].ToString().Replace(pCategory, pCategory + "</br>") + "</br>" + Row["Color"].ToString();
+                    if(Type == 0 || Type == 1)
+                    {
+                        Item.Name = Row["Name"].ToString().Replace(pCategory, pCategory + "</br>") + "</br>" + Row["Color"].ToString();
+                    }
+                    else
+                    {
+                        Item.Name = Row["Name"].ToString().Replace("РП-", "") + " " + Row["Color"].ToString();
+                    }
+                    
                     Item.ProductImageUrl = Catalog.URL + "Thumbs/" + Row["FileName"].ToString();
-                    Item.URL = "/Production?type=" + Type + "&cat=" + Category + "&item=" + Row["ImageID"].ToString();
+                    //Item.URL = "/Production?type=" + Type + "&cat=" + Category + "&item=" + Row["ImageID"].ToString();
+                    string encodedCategory = Uri.EscapeDataString(Category);
+                    Item.URL = $"/Production?type={Type}&cat={encodedCategory}&item={Row["ImageID"]}";
 
                     ProductMenu.Controls.Add(Item);
                 }
@@ -164,22 +208,34 @@ namespace Zovprofil.zovprofil
                 {
                     ProductMenuItem Item = (ProductMenuItem)Page.LoadControl("~/zovprofil/Controls/ProductMenuItem.ascx");
                     Item.ProductCategory = Row["Category"].ToString();
-     
-                    if (Type == 2)
+
+                    //if (Type == 2)
+                    //{
+                    //    if (Item.ProductCategory.ToLower() == "куб")
+                    //    {
+                    //        Item.ProductImageUrl = "https://zovprofil.by/Images/КУБ.jpeg";
+                    //    }
+                    //    else if (Item.ProductCategory.ToLower() == "норманн")
+                    //    {
+                    //        Item.ProductImageUrl = "https://zovprofil.by/Images/НОРМАНН.jpeg";
+                    //    }
+                    //    else if (Item.ProductCategory.ToLower() == "патриция")
+                    //    {
+                    //        Item.ProductImageUrl = "https://zovprofil.by/Images/патриция.jpeg";
+                    //    }
+                    //    else if (Item.ProductCategory.ToLower() == "мягкая")
+                    //    {
+                    //        Item.ProductImageUrl = "https://zovprofil.by/Images/мягкая.jpeg";
+                    //    }
+                    //    else
+                    //        Item.ProductImageUrl = Catalog.URL + "Thumbs/" + Row["FileName"].ToString();
+                    //}
+                    //else
+                    //Item.ProductImageUrl = Catalog.URL + "Thumbs/" + Row["FileName"].ToString();
+
+                    if (Type == 5)
                     {
-                        if (Item.ProductCategory.ToLower() == "куб")
-                        {
-                            Item.ProductImageUrl = "https://zovprofil.by/Images/КУБ.jpeg";
-                        }
-                        else if (Item.ProductCategory.ToLower() == "норманн")
-                        {
-                            Item.ProductImageUrl = "https://zovprofil.by/Images/НОРМАНН.jpeg";
-                        }
-                        else if (Item.ProductCategory.ToLower() == "патриция")
-                        {
-                            Item.ProductImageUrl = "https://zovprofil.by/Images/патриция.jpeg";
-                        }
-                        else if (Item.ProductCategory.ToLower() == "мягкая")
+                        if (Item.ProductCategory.ToLower() == "панель наборная")
                         {
                             Item.ProductImageUrl = "https://zovprofil.by/Images/мягкая.jpeg";
                         }
@@ -189,7 +245,9 @@ namespace Zovprofil.zovprofil
                     else
                         Item.ProductImageUrl = Catalog.URL + "Thumbs/" + Row["FileName"].ToString();
 
-                    Item.URL = "/Production?type=" + Type.ToString() + "&cat=" + Row["Category"].ToString();
+                    //Item.URL = "/Production?type=" + Type.ToString() + "&cat=" + Row["Category"].ToString();
+                    string encodedCategory = Uri.EscapeDataString(Row["Category"].ToString());
+                    Item.URL = $"/Production?type={Type}&cat={encodedCategory}";
 
                     ProductMenu.Controls.Add(Item);
                 }
@@ -287,7 +345,9 @@ namespace Zovprofil.zovprofil
 
                     Item.Name = Row["Name"].ToString().Replace(nCategory, nCategory + "</br>") + "</br>" + sColor.ToString();
                     Item.ProductImageUrl = Catalog.URL + "Thumbs/" + Row["FileName"].ToString();
-                    Item.URL = "/Production?type=" + 0 + "&cat=" + Row["Category"] + "&item=" + Row["ImageID"].ToString();
+                    //Item.URL = "/Production?type=" + 0 + "&cat=" + Row["Category"] + "&item=" + Row["ImageID"].ToString();
+                    string encodedCategory = Uri.EscapeDataString(Row["Category"].ToString());
+                    Item.URL = $"/Production?type={Type}&cat={encodedCategory}" + Row["ImageID"].ToString();
 
                     NotBasicFronts.Controls.Add(Item);
                 }

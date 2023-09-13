@@ -87,8 +87,8 @@ namespace Zovprofil
                                 "(ProductType = " + Type + ") AND ToSite = 1 ";
 
 
-            // Если тип - не декор, то выводим только эксклюзивные
-            if (Type != 1)
+            // Если тип - фасад, то выводим только эксклюзивные
+            if (Type == 0)
             {
                 querry += " AND [Category] LIKE '%Эксклюзив%' ORDER BY [Category]";
 
@@ -115,7 +115,8 @@ namespace Zovprofil
                 }
 
             }
-            else
+            // Если тип - декор, выводим только связанные с фасадами
+            else if(Type == 1)
             {
                 DataTable DT = new DataTable();
                 DT.Columns.Add("Category", System.Type.GetType("System.String"));
@@ -139,6 +140,31 @@ namespace Zovprofil
                 DT = DT.DefaultView.ToTable();
 
                 return DT;
+            }
+            else
+            {
+                using (SqlDataAdapter DA = new SqlDataAdapter("SELECT DISTINCT(Category) FROM ClientsCatalogImages WHERE (Category IS NOT NULL AND Category <> '') AND (ProductType = " + Type + ") AND ToSite = 1", ConnectionString))
+                {
+                    using (DataTable DT = new DataTable())
+                    {
+                        DA.Fill(DT);
+                        DT.Columns.Add("FileName", System.Type.GetType("System.String"));
+
+                        foreach (DataRow Row in DT.Rows)
+                        {
+                            using (SqlDataAdapter sDA = new SqlDataAdapter("SELECT TOP 1 FileName FROM ClientsCatalogImages WHERE Category = '" + Row["Category"].ToString() + "' AND ToSite = 1", ConnectionString))
+                            {
+                                using (DataTable sDT = new DataTable())
+                                {
+                                    sDA.Fill(sDT);
+                                    Row["FileName"] = sDT.Rows[0]["FileName"];
+                                }
+                            }
+                        }
+
+                        return DT;
+                    }
+                }
             }
         }        
 
@@ -273,7 +299,7 @@ namespace Zovprofil
 
             string Select = "SELECT FileName, Name, Description, Material, Sizes, Color, ImageID, ConfigID FROM ClientsCatalogImages WHERE Category = '" + Category + "'" + " AND ToSite = 1 AND CatSlider = 0 AND MainSlider = 0 AND ConfigID <> -1 AND Basic = 1 ORDER BY Name ASC";
 
-            if(Type == 3)//ready
+            if(Type == 4 || Type == 5)
                 Select = "SELECT FileName, Name, Color, ImageID FROM ClientsCatalogImages WHERE Category = '" + Category + "'" + " AND ToSite = 1 AND MainSlider = 0 AND CatSlider = 0 ORDER BY Name ASC";
 
             using (SqlDataAdapter DA = new SqlDataAdapter(Select, ConnectionString))

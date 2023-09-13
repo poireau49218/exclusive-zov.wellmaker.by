@@ -12,7 +12,7 @@
 
     <div style="text-align:center">
         <div style="width:1000px; display:inline-block; margin-top:30px; margin-bottom:30px;">
-            <div style="display:inline-block; float:left;  width:268px; border: 1px solid #f5f5f5;">
+            <div style="display:inline-block; float:left;  width:300px; border: 1px solid #f5f5f5;">
                 <div style="text-align:left; background-color:white; padding-left:15px; padding-top:3px; padding-bottom:5px;">
                     <div>
                         <a href="/Production?type=0">
@@ -41,6 +41,31 @@
                             <img src="/Images/dn.png" id="ExpImageProfile" runat="server" style="margin-top: 21px; float: right; margin-right: 15px;" />
                         </a>
                         <div id="DecorContainer" runat="server" class="lmenu-cat-cont"></div>
+
+                        
+
+                        
+
+
+                        <a href="/Production?type=4">
+                            <img src="/Images/promotion.png" style="float:left; width:20px; margin-top:14px;" />
+                            <div id="PromCat" runat="server" class="lmenu-cat">
+                                РЕКЛАМНАЯ ПРОДУКЦИЯ
+                            </div>
+                            <img src="/Images/dn.png" id="ExpImagePromotion" runat="server" style="margin-top: 21px; float: right; margin-right: 15px;" />
+                        </a>
+                        <div id="PromotionContainer" runat="server" class="lmenu-cat-cont"></div>
+
+                        <a href="/Production?type=5">
+                            <img src="/Images/interior.png" style="float:left; width:20px; margin-top:14px;" />
+                            <div id="InteriorCat" runat="server" class="lmenu-cat">
+                                ИНТЕРЬЕРНЫЕ ДЕКОРЫ
+                            </div>
+                            <img src="/Images/dn.png" id="ExpImageInterior" runat="server" style="margin-top: 21px; float: right; margin-right: 15px;" />
+                        </a>
+                        <div id="InteriorContainer" runat="server" class="lmenu-cat-cont"></div>
+                        
+
 
                         <div id="ReadyContainer" runat="server" class="lmenu-cat-cont"></div>
                     </div>
