@@ -347,7 +347,7 @@ namespace Zovprofil.zovprofil
                     Item.ProductImageUrl = Catalog.URL + "Thumbs/" + Row["FileName"].ToString();
                     //Item.URL = "/Production?type=" + 0 + "&cat=" + Row["Category"] + "&item=" + Row["ImageID"].ToString();
                     string encodedCategory = Uri.EscapeDataString(Row["Category"].ToString());
-                    Item.URL = $"/Production?type={Type}&cat={encodedCategory}" + Row["ImageID"].ToString();
+                    Item.URL = $"/Production?type={Type}&cat={encodedCategory}&item={Row["ImageID"]}";
 
                     NotBasicFronts.Controls.Add(Item);
                 }
