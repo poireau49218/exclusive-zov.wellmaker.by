@@ -56,14 +56,14 @@
                         </a>
                         <div id="PromotionContainer" runat="server" class="lmenu-cat-cont"></div>
 
-                        <a href="/Production?type=5">
+                        <%--<a href="/Production?type=5">
                             <img src="/Images/interior.png" style="float:left; width:20px; margin-top:14px;" />
                             <div id="InteriorCat" runat="server" class="lmenu-cat">
                                 ИНТЕРЬЕРНЫЕ ДЕКОРЫ
                             </div>
                             <img src="/Images/dn.png" id="ExpImageInterior" runat="server" style="margin-top: 21px; float: right; margin-right: 15px;" />
                         </a>
-                        <div id="InteriorContainer" runat="server" class="lmenu-cat-cont"></div>
+                        <div id="InteriorContainer" runat="server" class="lmenu-cat-cont"></div>--%>
                         
 
 
