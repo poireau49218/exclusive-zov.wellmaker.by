@@ -342,6 +342,8 @@ namespace Zovprofil.zovprofil
 
 
                 //MessageBox.Show(NotBasicDT.Rows.Count.ToString());
+                //MessageBox.Show(sMatrixID.ToString());
+                //MessageBox.Show(sConfigID.ToString());
                 foreach (DataRow Row in NotBasicDT.Rows)
                 {
                     if (Row["ImageID"].ToString() == ItemID)
