@@ -12,7 +12,7 @@
     </div>--%>
 
 
-    <div class="contacts-cont">
+    <%--<div class="contacts-cont">
             <div>
                 <div class="contacts-dep">
                     <div style="height:60px; padding:0 15px; background-color:#424242;">
@@ -222,7 +222,170 @@
                     </div>
             </div>
         </div>
+    </div>--%>
+    <div class="container">
+    <div class="block">
+        <div class="header-cont">
+            <div class="header-left">
+                <span>Приемная</span>
+            </div>
+            <div class="header-right">
+                <span>e-mail: <a href="mailto:office@zovprofil.by" style="color:white; text-decoration:underline">office@zovprofil.by</a></span>
+                <span>тел/факс: +375 (152) 60-81-04</span>
+            </div>
+        </div>
+        <div class="contacts">
+            <%--<div class="contact-item">
+                <img src="#" alt="Alternate Text" />
+                <span class="contact-name"></span>
+                <span class="contact-post"></span>
+                <span class="contact-phone"></span>
+            </div>--%>
+        </div>
     </div>
+    <div class="block">
+        <div class="header-cont">
+            <div class="header-left">
+                <span>Маркетинг</span>
+            </div>
+            <div class="header-right">
+                <span>e-mail: <a href="mailto:marketing@zovprofil.by" style="font-size:15px; color:white; text-decoration:underline">marketing@zovprofil.by</a></span>
+                <span>тел/факс: +375 (152) 60-81-63</span>
+                <span>тел.: +375 (29) 155-58-94</span>
+            </div>
+        </div>
+        <div class="contacts">
+            <%--<div class="contact-item">
+                <img src="/Images/img_avatar2.png" alt="Alternate Text" class="contact-avatar"/>
+                <span class="contact-name">Елена Лозовицкая</span>
+                <span class="contact-post">специалист отдела маркетинга</span>
+                <span class="contact-phone">моб. +375 (29) 155-58-94</span>
+            </div>--%>
+        </div>
+    </div>
+    <div class="block">
+        <div class="header-cont">
+            <div class="header-left">
+                <span>Отдел продаж</span>
+            </div>
+            <div class="header-right">
+                <span>e-mail: <a href="mailto:marketing@zovprofil.by" style="font-size:15px; color:white; text-decoration:underline">marketing@zovprofil.by</a></span>
+                <span>тел/факс: +375 (152) 60-81-63</span>
+            </div>
+        </div>
+        <div class="contacts">
+            <div class="contact-item">
+                <img src="/Images/img_avatar.png" alt="Alternate Text" class="contact-avatar"/>
+                <span class="contact-name">Михаил Кондрашов</span>
+                <span class="contact-post">начальник службы сбыта</span>
+                <span class="contact-phone">моб. +375 (29) 111-94-94</span>
+            </div>
+
+            <div class="contact-item">
+                <img src="/Images/img_avatar.png" alt="Alternate Text" class="contact-avatar"/>
+                <span class="contact-name">Павел Миклашевич</span>
+                <span class="contact-post">специалист по продаже</span>
+                <span class="contact-lang">PL, EN</span>
+                <span class="contact-phone">моб. +375 (29) 103-33-23</span>
+                <span class="contact-info">Работа с клиентами РБ, РФ и Польши.<br />Основные направления: мебельный и строительный погонаж</span>
+            </div>
+
+            <%--<div class="contact-item">
+                <img src="/Images/img_avatar2.png" alt="Alternate Text" class="contact-avatar"/>
+                <span class="contact-name">Дарья Трубина</span>
+                <span class="contact-post">специалист по продаже</span>
+                <span class="contact-phone">моб. +375 (44) 742-08-33</span>
+            </div>--%>
+        </div>
+    </div>
+    <div class="block">
+        <div class="header-cont">
+            <div class="header-left">
+                <span>Логистика</span>
+            </div>
+            <div class="header-right">
+                <span>e-mail: <a href="mailto:e.skamaroshka@zovprofil.by" style="font-size:15px; color:white; text-decoration:underline">e.skamaroshka@zovprofil.by</a></span>
+            </div>
+        </div>
+        <div class="contacts">
+            <%--<div class="contact-item">
+                <img src="/Images/img_avatar.png" alt="Alternate Text" class="contact-avatar"/>
+                <span class="contact-name">Юрий Карась</span>
+                <span class="contact-post">Логист</span>
+                <span class="contact-phone">моб. +375 (33) 624-03-40</span>
+                <span class="contact-info">Планирование отгрузок</span>
+            </div>--%>
+            <div class="contact-item">
+                <img src="/Images/img_avatar2.png" alt="Alternate Text" class="contact-avatar"/>
+                <span class="contact-name">Елена Эйсмонт</span>
+                <span class="contact-post">комплектовщик</span>
+                <span class="contact-phone">моб. +375 (29) 180-18-52</span>
+                <span class="contact-info">Прием товара</span>
+            </div>
+            <div class="contact-item">
+                <img src="/Images/img_avatar2.png" alt="Alternate Text" class="contact-avatar"/>
+                <span class="contact-name">Екатерина Марцулевич</span>
+                <span class="contact-post">ведущий экономист</span>
+                <span class="contact-phone">моб. +375 (29) 338-64-00</span>
+                <span class="contact-info">Выставление счетов и выписка документов.</span>
+            </div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="header-cont">
+            <div class="header-left">
+                <span>Снабжение</span>
+            </div>
+            <div class="header-right">
+                <span>e-mail: <a href="mailto:supply@zovprofil.by" style="font-size:15px; color:white; text-decoration:underline">supply@zovprofil.by</a></span>
+            </div>
+        </div>
+        <div class="contacts">
+            <div class="contact-item">
+                <img src="/Images/img_avatar2.png" alt="Alternate Text" class="contact-avatar"/>
+                <span class="contact-name">Марина Гайдель</span>
+                <span class="contact-post">начальник отдела ВЭС</span>
+                <span class="contact-lang">PL, EN, DE</span>
+                <span class="contact-phone">моб. +375 (29) 111-83-83</span>
+            </div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="header-cont">
+            <div class="header-left">
+                <span>Техотдел</span>
+            </div>
+            <div class="header-right">
+                <span>e-mail: <a href="mailto:tech@zovprofil.by" style="font-size:15px; color:white; text-decoration:underline">tech@zovprofil.by</a></span>
+            </div>
+        </div>
+        <div class="contacts">
+            <div class="contact-item">
+                <img src="/Images/img_avatar.png" alt="Alternate Text" class="contact-avatar"/>
+                <span class="contact-name">Юрий Янкойть</span>
+                <span class="contact-post">главный технолог</span>
+                <span class="contact-phone">моб. +375 (29) 180-18-45</span>
+            </div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="header-cont">
+            <div class="header-left">
+                <span>Отдел контроля качества</span>
+            </div>
+            <div class="header-right">
+            </div>
+        </div>
+        <div class="contacts">
+            <div class="contact-item">
+                <img src="/Images/img_avatar2.png" alt="Alternate Text" class="contact-avatar"/>
+                <span class="contact-name">Татьяна Шемет</span>
+                <span class="contact-post">специалист</span>
+                <span class="contact-phone">моб. +375 (29) 180-18-69</span>
+            </div>
+        </div>
+    </div>
+</div>
 
 
     <%--<div class="map-c">

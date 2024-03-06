@@ -89,13 +89,13 @@ namespace Zovprofil.zovprofil
                     ExpImageFronts.Src = "/Images/up.png";
                     MainDescriptionDiv.Style.Add("display", "block");
                     MainDescriptionDiv.Style.Add("display", "block");
-                    MainDescriptionDiv.InnerHtml = "Лицо будущей кухни – это мебельные фасады. На сегодняшний день существует огромное разнообразие материалов, используемых при производстве фасадов для кухни. Материалом, сочетающим в себе такие важные для потребителя характеристики, как качество исполнения, разнообразие цветов, эстетичный внешний вид и долговечность, является МДФ."
-+ "<br/><br/>Фабрика мебельных фасадов ОМЦ-Профиль специализируется на выпуске мебельных фасадов из МДФ, облицованных синтетическими пленками от ведущих поставщиков декоративных покрытий. На сайте представлены различные виды кухонных фасадов: глухие, с фрезерованной филенкой, витрины и фасады с решеткой."
-+ "<br/><br/>Дилеры компании ОМЦ-Профиль успешно применяют фасады для изготовления различных мебельных изделий. Для офисной мебели идеально подходят Марсель-4, для гостиной и спальни подходят фасады Инфинити."
-+ "<br/><br/>Материал: МДФ, ЛМДФ, ДСтП."
-+ "<br/>Профиль: профиль 16 мм - 25 мм."
-+ "<br/>Варианты исполнения: глухой-фасад, фасад с решеткой, фасад - витрина."
-+ "<br/>Покрытие: полипропилен, ПВХ, финиш - пленка(с ЛКМ и без), шпон.";
+                    MainDescriptionDiv.InnerHtml = "Лицо будущей кухни &mdash; это мебельные фасады." +
+                        "<br/>На сегодняшний день существует огромное разнообразие материалов, используемых при производстве фасадов для кухни. Фабрика мебельных фасадов &laquo;" +
+                        "ОМЦ-Профиль&raquo; использует материалы, сочетающие в себе такие важные для потребителя характеристики, как качество исполнения, разнообразие цветов, " +
+                        "эстетичный внешний вид и долговечность. Компания специализируется на выпуске мебельных фасадов из МДФ, облицованных синтетическими пленками от ведущих поставщиков " +
+                        "декоративных покрытий (полипропилен, нанофлекс, ПВХ, финиш-плёнка). Многие коллекции могут быть так же выполнены с нанесением лакокрасочных материалов." +
+                        "<br/>На сайте представлены различные виды кухонных фасадов: рамочные и фрезерованные, витрины и глухие с различными видами вставок. Так же к каждой коллекции " +
+                        "предлагаются декоративные элементы, которые придадут Вашему интерьеру индивидуальность и законченный вид.";
                 }
 
                 if (Type == 1)
@@ -193,8 +193,11 @@ namespace Zovprofil.zovprofil
                     {
                         Item.Name = Row["Name"].ToString().Replace("РП-", "") + " " + Row["Color"].ToString();
                     }
-                    
-                    Item.ProductImageUrl = Catalog.URL + "Thumbs/" + Row["FileName"].ToString();
+
+                    if (File.Exists(Catalog.URL + "Thumbs/" + Row["FileName"].ToString()))
+                        Item.ProductImageUrl = Catalog.URL + "Thumbs/" + Row["FileName"].ToString();
+                    else
+                        Item.ProductImageUrl = Catalog.URL + Row["FileName"].ToString();
                     //Item.URL = "/Production?type=" + Type + "&cat=" + Category + "&item=" + Row["ImageID"].ToString();
                     string encodedCategory = Uri.EscapeDataString(Category);
                     Item.URL = $"/Production?type={Type}&cat={encodedCategory}&item={Row["ImageID"]}";
@@ -282,7 +285,16 @@ namespace Zovprofil.zovprofil
                 if (!sCategory.Contains("Эксклюзив"))
                     ProductItemName.Style["color"] = Catalog.notExclusiveFontColor;
 
-                string sTechStoreFile = Catalog.GetTechStoreImage(Convert.ToInt32(sTechID));
+
+                string sTechStoreFile = "";
+                try
+                {
+                    sTechStoreFile = Catalog.GetTechStoreImage(Convert.ToInt32(sTechID));
+                }
+                catch
+                {
+
+                }
                 FillProductSlider(sFileName, sTechStoreFile, bool.Parse(sBasic), Type);
 
                 string pCategory = sCategory.Replace("Эксклюзив ZOV: ", "");
@@ -423,7 +435,9 @@ namespace Zovprofil.zovprofil
 
             if(Basic == true || Type == 1)
                 count = 2;
-                
+
+            if (TechStoreFile == "")
+                count = 1;
 
             for (int i = 0; i < count; i++)
             {
@@ -441,7 +455,10 @@ namespace Zovprofil.zovprofil
                 }
                 else
                 {
-                    img.Attributes.Add("src", Catalog.URL + "Thumbs/" + ProductFile);
+                    if (File.Exists(Catalog.URL + "Thumbs/" + ProductFile))
+                        img.Attributes.Add("src", Catalog.URL + "Thumbs/" + ProductFile);
+                    else
+                        img.Attributes.Add("src", Catalog.URL + ProductFile);
                     sliderUrls += Catalog.URL + ProductFile.ToString() + ";";
                 }                
 
