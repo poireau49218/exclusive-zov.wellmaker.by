@@ -1,4 +1,9 @@
 ﻿using System;
+using System.Data;
+using System.Linq;
+using Zovprofil.zovprofil.Controls;
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
@@ -74,10 +79,10 @@ namespace Zovprofil.zovprofil
                 {
                     PromCat.Attributes.Add("class", "lmenu-cat selected");
                 }
-                if (Type == 5)
-                {
-                    InteriorCat.Attributes.Add("class", "lmenu-cat selected");
-                }
+                //if (Type == 5)
+                //{
+                //    InteriorCat.Attributes.Add("class", "lmenu-cat selected");
+                //}
 
 
             }
@@ -89,13 +94,13 @@ namespace Zovprofil.zovprofil
                     ExpImageFronts.Src = "/Images/up.png";
                     MainDescriptionDiv.Style.Add("display", "block");
                     MainDescriptionDiv.Style.Add("display", "block");
-                    MainDescriptionDiv.InnerHtml = "Лицо будущей кухни &mdash; это мебельные фасады." +
-                        "<br/>На сегодняшний день существует огромное разнообразие материалов, используемых при производстве фасадов для кухни. Фабрика мебельных фасадов &laquo;" +
-                        "ОМЦ-Профиль&raquo; использует материалы, сочетающие в себе такие важные для потребителя характеристики, как качество исполнения, разнообразие цветов, " +
-                        "эстетичный внешний вид и долговечность. Компания специализируется на выпуске мебельных фасадов из МДФ, облицованных синтетическими пленками от ведущих поставщиков " +
-                        "декоративных покрытий (полипропилен, нанофлекс, ПВХ, финиш-плёнка). Многие коллекции могут быть так же выполнены с нанесением лакокрасочных материалов." +
-                        "<br/>На сайте представлены различные виды кухонных фасадов: рамочные и фрезерованные, витрины и глухие с различными видами вставок. Так же к каждой коллекции " +
-                        "предлагаются декоративные элементы, которые придадут Вашему интерьеру индивидуальность и законченный вид.";
+                    MainDescriptionDiv.InnerHtml = "Лицо будущей кухни – это мебельные фасады. На сегодняшний день существует огромное разнообразие материалов, используемых при производстве фасадов для кухни. Материалом, сочетающим в себе такие важные для потребителя характеристики, как качество исполнения, разнообразие цветов, эстетичный внешний вид и долговечность, является МДФ."
++ "<br/><br/>Фабрика мебельных фасадов ОМЦ-Профиль специализируется на выпуске мебельных фасадов из МДФ, облицованных синтетическими пленками от ведущих поставщиков декоративных покрытий. На сайте представлены различные виды кухонных фасадов: глухие, с фрезерованной филенкой, витрины и фасады с решеткой."
++ "<br/><br/>Дилеры компании ОМЦ-Профиль успешно применяют фасады для изготовления различных мебельных изделий."
++ "<br/><br/>Материал: МДФ, ЛМДФ, ДСтП."
++ "<br/>Профиль: профиль 16 мм - 25 мм."
++ "<br/>Варианты исполнения: глухой-фасад, фасад с решеткой, фасад - витрина."
++ "<br/>Покрытие: полипропилен, ПВХ, финиш - пленка(с ЛКМ и без), шпон.";
                 }
 
                 if (Type == 1)
@@ -120,12 +125,12 @@ namespace Zovprofil.zovprofil
                     MainDescriptionDiv.Style.Add("display", "block");
                     MainDescriptionDiv.InnerHtml = "Представить широкий ассортимент нашей продукции в Вашем магазине или выставочном салоне помогут наши рекламные материалы. Среди всего разнообразия наших стендов, стоек, экспозиторов – Вы обязательно найдете то, что подойдёт именно Вашей торговой точке. На них Вы сможете разместить образцы наших фасадов декорэлементов и профилей. Не хватает места в салоне – не беда, специально для Вас мы разработали образцы с минимальными размерами в виде четвертинок фасадов и небольших планшетов с декроэлементами и профилями. Для работы дизайнеров на выезде у клиента мы предлагаем большой ассортимент образцов, которые могут быть укомплектованы удобными экспобоксами, которые облегчат работу с образцами и увеличат срок их службы. Классические рекламные продукты в виде каталогов и вееров облицовочного материала мы тоже рады Вам предоставить.";
                 }
-                if (Type == 5)
-                {
-                    ExpImageInterior.Src = "/Images/up.png";
-                    MainDescriptionDiv.Style.Add("display", "block");
-                    MainDescriptionDiv.InnerHtml = "Декоративные рейки в интерьере - современный прием для отделки стен и зонирования. В дизайне помещения рейки могут быть не только акцентным украшением, но и функциональным элементом.<br/>Как можно применить эту конструкцию для вашего интерьера?<br/><br/>1. Зонирование. В больших комнатах с помощью баффелей можно отгородить различные зоны: обеденную и “диванную” – в кухне-гостиной, работы и отдыха – в совмещенной с домашним офисом спальне и так далее. Особенно это решение пригодится в компактных квартирах-студиях: с его помощью можно обозначить в общем пространстве жилища уединенную зону спальни, при этом не лишив ее естественного освещения.<br/><br/>2. Перила. Рейки - отличная альтернатива классическим перилам в домах с лестницей: вертикальные панели на всю высоту пролета так же безопасны, но выглядят более стильно, современно и необычно. Такая лестница непременно станет центром всеобщего внимания и главным украшением вашего дома.<br/><br/>3. Двери. Декоративные планки могут заменить двери шкафов, гардеробных и систем хранения. Такой прием сейчас особенно популярен в лаконичных интерьерах современного стиля и минимализма.<br/><br/>4. Декор. С помощью ламелей можно оформить стены, придав им оригинальную фактуру и объем. Варианты в тон стены добавят глубины помещению в стиле минимализм, контрастные скорректируют геометрию комнаты, модели из дерева украсят интерьеры в экостиле, а металлические – в стиле лофт.<br/><br/>5. Эффектное освещение. При помощи реек можно сделать необычное освещение в интерьерах современного стиля, лофт и хай-тек, оформив лампы как элемент конструкции. Вытянутые светильники замаскировать среди планок. Также можно спрятать светодиодные ленты за баффелями, создав эффект “света изнутри”. Если при этом использовать разноцветную подсветку, она станет ярким элементом ваших вечеринок.";
-                }
+                //if (Type == 5)
+                //{
+                //    ExpImageInterior.Src = "/Images/up.png";
+                //    MainDescriptionDiv.Style.Add("display", "block");
+                //    MainDescriptionDiv.InnerHtml = "Декоративные рейки в интерьере - современный прием для отделки стен и зонирования. В дизайне помещения рейки могут быть не только акцентным украшением, но и функциональным элементом.<br/>Как можно применить эту конструкцию для вашего интерьера?<br/><br/>1. Зонирование. В больших комнатах с помощью баффелей можно отгородить различные зоны: обеденную и “диванную” – в кухне-гостиной, работы и отдыха – в совмещенной с домашним офисом спальне и так далее. Особенно это решение пригодится в компактных квартирах-студиях: с его помощью можно обозначить в общем пространстве жилища уединенную зону спальни, при этом не лишив ее естественного освещения.<br/><br/>2. Перила. Рейки - отличная альтернатива классическим перилам в домах с лестницей: вертикальные панели на всю высоту пролета так же безопасны, но выглядят более стильно, современно и необычно. Такая лестница непременно станет центром всеобщего внимания и главным украшением вашего дома.<br/><br/>3. Двери. Декоративные планки могут заменить двери шкафов, гардеробных и систем хранения. Такой прием сейчас особенно популярен в лаконичных интерьерах современного стиля и минимализма.<br/><br/>4. Декор. С помощью ламелей можно оформить стены, придав им оригинальную фактуру и объем. Варианты в тон стены добавят глубины помещению в стиле минимализм, контрастные скорректируют геометрию комнаты, модели из дерева украсят интерьеры в экостиле, а металлические – в стиле лофт.<br/><br/>5. Эффектное освещение. При помощи реек можно сделать необычное освещение в интерьерах современного стиля, лофт и хай-тек, оформив лампы как элемент конструкции. Вытянутые светильники замаскировать среди планок. Также можно спрятать светодиодные ленты за баффелями, создав эффект “света изнутри”. Если при этом использовать разноцветную подсветку, она станет ярким элементом ваших вечеринок.";
+                //}
             }
 
 
@@ -162,13 +167,29 @@ namespace Zovprofil.zovprofil
 
                 if (Type == 4)
                 {
-                    PromotionContainer.Controls.Add(Item);
+                    string[] not_show = new string[] { "Имитация", "Стенды", "Погонаж мебельный", "Фасады мебельные" };
+                    if(!not_show.Contains(Row["Category"]))
+                        PromotionContainer.Controls.Add(Item);
                 }
-                if (Type == 5)
-                {
-                    InteriorContainer.Controls.Add(Item);
-                }
+                //if (Type == 5)
+                //{
+                //    InteriorContainer.Controls.Add(Item);
+                //}
             }
+
+
+            HtmlGenericControl hr = new HtmlGenericControl("hr");
+            hr.Style["width"] = "100%";
+            hr.Style["color"] = "#fff";
+
+            HtmlGenericControl link = new HtmlGenericControl("a");
+            link.Attributes["href"] = "https://zovprofil.by/Production?type=0";
+            link.InnerHtml = "Общедоступные позиции";
+            link.Attributes["class"] = "lmenu-item";
+            link.Style["text-align"] = "left";
+
+            FrontsContainer.Controls.Add(hr);
+            FrontsContainer.Controls.Add(link);
 
             if (Category.Length > 0 && ItemID.Length == 0)
             {
@@ -193,11 +214,8 @@ namespace Zovprofil.zovprofil
                     {
                         Item.Name = Row["Name"].ToString().Replace("РП-", "") + " " + Row["Color"].ToString();
                     }
-
-                    if (File.Exists(Catalog.URL + "Thumbs/" + Row["FileName"].ToString()))
-                        Item.ProductImageUrl = Catalog.URL + "Thumbs/" + Row["FileName"].ToString();
-                    else
-                        Item.ProductImageUrl = Catalog.URL + Row["FileName"].ToString();
+                    
+                    Item.ProductImageUrl = Catalog.URL + "Thumbs/" + Row["FileName"].ToString();
                     //Item.URL = "/Production?type=" + Type + "&cat=" + Category + "&item=" + Row["ImageID"].ToString();
                     string encodedCategory = Uri.EscapeDataString(Category);
                     Item.URL = $"/Production?type={Type}&cat={encodedCategory}&item={Row["ImageID"]}";
@@ -209,6 +227,10 @@ namespace Zovprofil.zovprofil
             {
                 foreach (DataRow Row in CategoryDT.Rows)
                 {
+                    string[] not_show = new string[] { "Имитация", "Стенды", "Погонаж мебельный", "Фасады мебельные" };
+                    if (not_show.Contains(Row["Category"]))
+                        continue;
+
                     ProductMenuItem Item = (ProductMenuItem)Page.LoadControl("~/zovprofil/Controls/ProductMenuItem.ascx");
                     Item.ProductCategory = Row["Category"].ToString();
 
@@ -285,16 +307,7 @@ namespace Zovprofil.zovprofil
                 if (!sCategory.Contains("Эксклюзив"))
                     ProductItemName.Style["color"] = Catalog.notExclusiveFontColor;
 
-
-                string sTechStoreFile = "";
-                try
-                {
-                    sTechStoreFile = Catalog.GetTechStoreImage(Convert.ToInt32(sTechID));
-                }
-                catch
-                {
-
-                }
+                string sTechStoreFile = Catalog.GetTechStoreImage(Convert.ToInt32(sTechID));
                 FillProductSlider(sFileName, sTechStoreFile, bool.Parse(sBasic), Type);
 
                 string pCategory = sCategory.Replace("Эксклюзив ZOV: ", "");
@@ -343,6 +356,8 @@ namespace Zovprofil.zovprofil
 
 
                 //MessageBox.Show(NotBasicDT.Rows.Count.ToString());
+                //MessageBox.Show(sMatrixID.ToString());
+                //MessageBox.Show(sConfigID.ToString());
                 foreach (DataRow Row in NotBasicDT.Rows)
                 {
                     if (Row["ImageID"].ToString() == ItemID)
@@ -435,9 +450,7 @@ namespace Zovprofil.zovprofil
 
             if(Basic == true || Type == 1)
                 count = 2;
-
-            if (TechStoreFile == "")
-                count = 1;
+                
 
             for (int i = 0; i < count; i++)
             {
@@ -455,10 +468,7 @@ namespace Zovprofil.zovprofil
                 }
                 else
                 {
-                    if (File.Exists(Catalog.URL + "Thumbs/" + ProductFile))
-                        img.Attributes.Add("src", Catalog.URL + "Thumbs/" + ProductFile);
-                    else
-                        img.Attributes.Add("src", Catalog.URL + ProductFile);
+                    img.Attributes.Add("src", Catalog.URL + "Thumbs/" + ProductFile);
                     sliderUrls += Catalog.URL + ProductFile.ToString() + ";";
                 }                
 
