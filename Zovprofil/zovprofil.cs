@@ -101,7 +101,7 @@ namespace Zovprofil
 
                         foreach (DataRow Row in DT.Rows)
                         {
-                            string query = "SELECT TOP 1 FileName FROM ClientsCatalogImages WHERE Category = '" + Row["Category"].ToString() + "' AND ProductType != 3 AND ToSite = 1 AND Basic = 1";
+                            string query = "SELECT TOP 1 FileName FROM ClientsCatalogImages WHERE Category = '" + Row["Category"].ToString() + "' AND ProductType != 3 AND ToSite = 1 AND Basic = 1 ORDER BY Color DESC";
 
                             using (SqlDataAdapter sDA = new SqlDataAdapter(query, ConnectionString))
                             {
