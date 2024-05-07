@@ -1,20 +1,20 @@
-﻿<%@ Page Title="О компании, сроки производства – фабрика ЗОВ-Профиль" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="Zovprofil.zovprofil.About" %>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
+﻿
+
+
+
+
+
+
+
+
+<%@ Page Title="О компании, сроки производства – фабрика ОМЦ-Профиль" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="Zovprofil.zovprofil.About" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
 
     <link href="../Styles/about.css" rel="stylesheet" />
 
-    <%--<div class="about-h">
-        <div class="textcont">
-            <span class="t1">О компании</span>
-            <span class="t2">История, награды и сертификаты</span>
-        </div>
-        <div class="im1"></div>
-        <div class="im2"></div>
-    </div>--%>
-
-    <div class="about-cont">
+    <div class="container">
         
-                <div style="text-align:justify; margin-bottom:30px; margin-top:30px;">
+        <div style="text-align:justify; margin-bottom:30px; margin-top:30px;">
             <span class="cont-t">
             ООО «ОМЦ-ПРОФИЛЬ» – достаточно молодая
 компания, основанная в 2002г., но уже обладающая значительным опытом, объемом
@@ -60,83 +60,6 @@
 <br />Новый вид погонажной подукции - 1 месяц</span>
         </div>
     </div>
-
-
-
-
-    <%--<div class="image-cont">
-         <div>
-             <span class="cont-h">Награды и сертификаты</span>
-             <div class="cont-c">
-                 <div class="wrap">
-                     <img src="/Images/About/aw/1.jpg" class="aim" />
-                     <img src="/Images/About/aw/2.jpg" class="aim" />
-                     <img src="/Images/About/aw/3.jpg" class="aim" />
-                     <img src="/Images/About/aw/4.jpg" class="aim" />
-                     <img src="/Images/About/aw/5.jpg" class="aim" />
-                     <img src="/Images/About/aw/6.jpg" class="aim" />
-                     <img src="/Images/About/aw/7.jpg" class="aim" />
-                     <img src="/Images/About/aw/8.jpg" class="aim" />
-                     <img src="/Images/About/aw/9.jpg" class="aim" />
-                     <img src="/Images/About/aw/10.jpg" class="aim" />
-                     <img src="/Images/About/aw/11.jpg" class="aim" />
-                     <img src="/Images/About/aw/12.jpg" class="aim" />
-                     <img src="/Images/About/aw/13.jpg" class="aim" />
-                     <img src="/Images/About/aw/14.jpg" class="aim" />
-                     <img src="/Images/About/aw/15.jpg" class="aim" />
-                     <img src="/Images/About/aw/16.jpg" class="aim" />
-                     <img src="/Images/About/aw/17.jpg" class="aim" />
-                     <img src="/Images/About/aw/18.jpg" class="aim" />
-                     <img src="/Images/About/aw/19.jpg" class="aim" />
-                     <img src="/Images/About/aw/20.jpg" class="aim" />
-                     <img src="/Images/About/aw/21.jpg" class="aim" />
-                     <img src="/Images/About/aw/22.jpg" class="aim" />
-                     <img src="/Images/About/aw/23.jpg" class="aim" />
-                     <img src="/Images/About/aw/24.jpg" class="aim" />
-                     <img src="/Images/About/aw/25.jpg" class="aim" />
-                     <img src="/Images/About/aw/26.jpg" class="aim" />
-                     <img src="/Images/About/aw/27.jpg" class="aim" />
-                     <img src="/Images/About/aw/28.jpg" class="aim" />
-                     <img src="/Images/About/aw/29.jpg" class="aim" />
-                     <img src="/Images/About/aw/30.jpg" class="aim" />
-                     <img src="/Images/About/aw/31.jpg" class="aim" />
-                     <img src="/Images/About/aw/32.jpg" class="aim" />
-                     <img src="/Images/About/aw/33.jpg" class="aim" />
-                     <img src="/Images/About/aw/34.jpg" class="aim" />
-                     <img src="/Images/About/aw/35.jpg" class="aim" />
-                     <img src="/Images/About/aw/36.jpg" class="aim" />
-                     <img src="/Images/About/aw/37.jpg" class="aim" />
-                     <img src="/Images/About/aw/38.jpg" class="aim" />
-                     <img src="/Images/About/aw/39.jpg" class="aim" />
-                     <img src="/Images/About/aw/40.jpg" class="aim" />
-                     <img src="/Images/About/aw/41.jpg" class="aim" />
-                     <img src="/Images/About/aw/42.jpg" class="aim" />
-                     <img src="/Images/About/aw/43.jpg" class="aim" />
-                     <img src="/Images/About/aw/44.jpg" class="aim" />
-                     <img src="/Images/About/aw/45.jpg" class="aim" />
-                     <img src="/Images/About/aw/46.jpg" class="aim" />
-                     <img src="/Images/About/aw/47.jpg" class="aim" />
-                     <img src="/Images/About/aw/48.jpg" class="aim" />
-                     <img src="/Images/About/aw/49.jpg" class="aim" />
-                     <img src="/Images/About/aw/50.jpg" class="aim" />
-                     <img src="/Images/About/aw/51.jpg" class="aim" />
-                     <img src="/Images/About/aw/52.jpg" class="aim" />
-                     <img src="/Images/About/aw/53.jpg" class="aim" />
-                     <img src="/Images/About/aw/54.jpg" class="aim" />
-                     <img src="/Images/About/aw/55.jpg" class="aim" />
-                     <img src="/Images/About/aw/56.jpg" class="aim" />
-                     <img src="/Images/About/aw/57.jpg" class="aim" />
-                     <img src="/Images/About/aw/58.jpg" class="aim" />
-                     <img src="/Images/About/aw/59.jpg" class="aim" />
-                     <img src="/Images/About/aw/60.jpg" class="aim" />
-                     <img src="/Images/About/aw/61.jpg" class="aim" />
-                     <img src="/Images/About/aw/62.jpg" class="aim" />
-                     <img src="/Images/About/aw/63.jpg" class="aim" />
-                     <img src="/Images/About/aw/64.jpg" class="aim" />
-                 </div>
-            </div>
-         </div>
-    </div>--%>
 
     <script>
         $(document).ready(function () {

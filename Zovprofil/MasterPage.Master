@@ -4,37 +4,56 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<%--<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>--%>
+    <meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
-    <link runat="server" rel="shortcut icon" href="Images/logo.svg" type="image/x-icon"/>
+    <link runat="server" rel="shortcut icon" href="/Images/favicon.ico" type="image/x-icon"/>
     <link href="Styles/master.css" rel="stylesheet" />
-    <link href="Styles/bootstrap.css" rel="stylesheet" />
-    <script src="Scripts/jquery-3.1.0.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-    <script src="Scripts/xregexp-all-min.js"></script>
     <script src="https://mc.yandex.ru/metrika/tag.js"></script>
 
+
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="Scripts/burger.js"></script>
+
+    <%--<script src="Scripts/jquery-3.1.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/xregexp-all-min.js"></script>--%>
+    <script src="https://mc.yandex.ru/metrika/tag.js"></script>
+
+    <%--<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../Scripts/swiper.js"></script>--%>
+
     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-ga('create', 'UA-88396607-1', 'auto');
-ga('send', 'pageview');
+        ga('create', 'UA-88396607-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 
-</script>
+
 
 <meta name="yandex-verification" content="8b320b9979990d71" />
 
 
 <script type='text/javascript'>
-(function(){ var widget_id = 'gxANDlO9YX';var d=document;var w=window;function l(){
-        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/' + widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);
-    } if (d.readyState == 'complete') { l(); } else { if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } }
+    (function () {
+        var widget_id = 'gxANDlO9YX'; var d = document; var w = window; function l() {
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/' + widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);
+        } if (d.readyState == 'complete') { l(); } else { if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } }
     })();
 </script>
 
@@ -42,16 +61,16 @@ ga('send', 'pageview');
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function (d, w, c) {
-        (w[c] = w[c] || []).push(function() {
+        (w[c] = w[c] || []).push(function () {
             try {
                 w.yaCounter41317194 = new Ya.Metrika({
-                    id:41317194,
-                    clickmap:true,
-                    trackLinks:true,
-                    accurateTrackBounce:true,
-                    webvisor:true
+                    id: 41317194,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true,
+                    webvisor: true
                 });
-            } catch(e) { }
+            } catch (e) { }
         });
 
         var n = d.getElementsByTagName("script")[0],
@@ -70,13 +89,11 @@ ga('send', 'pageview');
 <!-- /Yandex.Metrika counter -->
 
     <script>
-        function ShowContent()
-        {
+        function ShowContent() {
             $(document.getElementById('Content')).fadeTo("slow", 1);
         }
 
-        function ShowMessage()
-        {
+        function ShowMessage() {
             $('#MessageDialogModal').modal('show');
         }
 
@@ -84,8 +101,7 @@ ga('send', 'pageview');
             ym(41317194, 'reachGoal', 'e-sale');
         }
 
-        function SendMessage()
-        {
+        function SendMessage() {
             var Name = document.getElementById('NameInput');
             var Email = document.getElementById('EmailInput');
             var Company = document.getElementById('CompanyInput');
@@ -100,8 +116,7 @@ ga('send', 'pageview');
             Text.style.borderColor = "#e6e6e6";
 
 
-            if (Name.value.trim().length == 0)
-            {
+            if (Name.value.trim().length == 0) {
                 Name.style.borderColor = "red";
 
                 return;
@@ -115,7 +130,7 @@ ga('send', 'pageview');
                 return;
             }
 
-            if (Text.value.trim().length == 0){
+            if (Text.value.trim().length == 0) {
                 Text.style.borderColor = "red";
 
                 return;
@@ -125,95 +140,134 @@ ga('send', 'pageview');
 
             prod = $('input[name="prod"]:checked').val();
 
-            $('#MessageDialogModal').modal('hide');
+            /*$('#MessageDialogModal').modal('hide');*/
+            var modal = document.getElementById("MessageDialogModal");
+            modal.style.display = "none";
 
             alert('Спасибо за сообщение!');
 
             Zovprofil.Service.SendMessage(Name.value.trim(), Email.value.trim(), Text.value.trim(), Phone.value.trim(), Company.value.trim(), type, prod, onSendMessage);
         }
 
-        function onSendMessage(result)
-        {
+        function onSendMessage(result) {
         }
     </script>
 
 </head>
 <body>
-    <div class="header">
-        <div class="header-top">
-            <div class="header-top-logo">
-                <img src="/Images/logo-zov.png" style="height:30px;" />
-            </div>
-            <div class="header-top-cont">
-                <div class="numb" style="margin-right:20px">
+    <header>
+		<div class="container">
+			<div class="header-top">
+				<div class="logo">
+                    <img src="/Images/logo-zov.png" alt=""/>
+				</div>
+
+				<div class="facebook">
                     <a target="_blank" href="https://www.facebook.com/%D0%A1-%D0%9E%D0%9E%D0%9E-%D0%97%D0%9E%D0%92-%D0%9F%D1%80%D0%BE%D1%84%D0%B8%D0%BB%D1%8C-150153668848633/">
-                        <img src="/Images/icons8-facebook-30.png" class="img" />
+					    <img src="/Images/facebook.svg" alt=""/>
                     </a>
-                </div>
-                <div class="numb" style="margin-right:20px">
-                    <a target="_blank" href="https://instagram.com/omcprofil.by?igshid=YmMyMTA2M2Y=">
-                        <img src="/Images/icons8-instagram-30.png" class="img" />
+				</div>
+				<div class="instagram">
+                    <a target="_blank" href="https://www.instagram.com/omcprofil.by/">
+					    <img src="/Images/instagram.svg" alt=""/>
                     </a>
-                </div>
-                <div class="numb">
-                    <img src="/Images/icons8-phone-30.png" class="img" />
-                    <span class="phonem">+375 (152) 60-81-63</span>
-                </div>
-                <a href="https://zovofficial.com/" onclick="ymetr()" target="_blank" style="margin-right:-4px;">
-                    <div class="shop noselect">
-                        <img src="/Images/cart.png" class="img" />
-                        <span class="but">Где купить</span>
-                    </div>
+				</div>
+				<div class="telegram">
+                    <a target="_blank" href="https://t.me/OMC_Profil">
+					    <img src="/Images/telegram.svg" alt=""/>
+                    </a>
+				</div>
+				<div class="number">
+					<img src="/Images/whatsapp.svg" alt=""/>
+					<div style="margin: auto;">+375 (152) 60-81-63</div>
+				</div>
+
+                <a href="https://zovofficial.com/dealers/" target="_blank">
+				    <div class="button-shop">
+					    <img src="/Images/cart.png" alt=""/>
+					    <div style="margin: auto;">ИНТЕРНЕТ-МАГАЗИН</div>
+				    </div>
                 </a>
-                <div class="write noselect" style="margin:0" onclick="ShowMessage()">
-                    <img src="/Images/write_w.png" class="img" />
-                    <span class="but">НАПИСАТЬ</span>
-                </div>
-            </div>
-        </div>
-        <div class="noselect main-menu">
-            <div class="back">
-                <div class="back-cont">
-                    <a href="/Main" class="item">
-                        <div id="MainItem" runat="server" class="text">
-                            Главная
-                        </div>
-                    </a>                
-                    <a href="/Production" class="item">
-                        <div id="ProdItem" runat="server" class="text">
-                            Каталог
-                        </div>
-                    </a>
-                    <a href="/News"  class="item">
-                        <div id="NewsItem" runat="server" class="text">
-                            Новости
-                        </div>
-                    </a>
-                    <%--<a href="/Wheretobuy"  class="item">
-                        <div id="WhereItem" runat="server" class="text">
-                            Где купить?
-                        </div>
-                    </a>--%>
-                    <a href="/Downloads"  class="item">
-                        <div id="DownloadsItem" runat="server" class="text">
-                            Клиентам
-                        </div>
-                    </a>
-                    <a href="/About"  class="item">
-                        <div id="AboutItem" runat="server" class="text">
-                            О компании
-                        </div>
-                    </a>
-                    <a href="/Contacts"  class="item">
-                        <div id="ContactsItem" runat="server" class="text">
-                            Контакты
-                        </div>
-                    </a>
-                </div>
-            </div>
-            
-        </div>
-    </div>
+
+				<div class="button-contact" id="button-contact" onclick="showModal()">
+					<img src="/Images/letter.png" alt=""/>
+					<div style="margin: auto;">НАПИСАТЬ</div>
+				</div>
+
+
+				<div class="header-burger">
+		      		<span></span>
+		        </div>
+                 
+		        <div class="menu-overlay">
+					<div class="menu">
+						<ul>
+							<li class="menu-mobile"><a href="/News">Новости</a></li>
+							<li class="menu-tablet"><a href="/About">О компании</a></li>
+							<li class="menu-tablet"><a href="/Contacts">Контакты</a></li>
+							<li class="but menu-buttons">
+                                <a href="http://www.wm-shop.by/" onclick="ymetr()" target="_blank" style="display: flex; flex-direction: row;">
+								    <img src="/Images/cart.png" alt=""/>
+								    <div style="color: white">ИНТЕРНЕТ-МАГАЗИН</div>
+                                </a>
+							</li>
+							<li class="but menu-buttons" onclick="showModal()">
+								<img src="/Images/letter.png" alt=""/>
+								<div style="color: white;">НАПИСАТЬ</div>
+							</li>	
+							<li><a href="#">+375 (152) 60-81-63</a></li>
+							<li>
+								<a target="_blank" href="https://www.facebook.com/%D0%A1-%D0%9E%D0%9E%D0%9E-%D0%97%D0%9E%D0%92-%D0%9F%D1%80%D0%BE%D1%84%D0%B8%D0%BB%D1%8C-150153668848633/">
+									<img src="/Images/facebook.svg" alt=""/>
+								</a>
+								<a target="_blank" href="https://www.instagram.com/omcprofil.by/">
+									<img src="/Images/instagram.svg" alt=""/>
+								</a>
+								<a target="_blank" href="https://t.me/OMC_Profil">
+									<img src="/Images/telegram.svg" alt=""/>
+								</a>
+								<a href="#">
+									<img src="/Images/whatsapp.svg" alt=""/>
+								</a>
+							</li>	
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			
+
+			<div class="menu">
+				<a href="/Main" class="item">
+					<div class="nav-main" runat="server">Главная</div>
+				</a>
+				<a href="/Production" class="item">
+					<div class="nav-catalog" runat="server">Каталог</div>
+				</a>
+				<a href="/News" class="item mobile">
+					<div class="nav-news" runat="server">Новости</div>
+				</a>
+				<a href="https://zovofficial.com/dealers/" class="item">
+					<div class="nav-wheretobuy" runat="server">Где купить</div>
+				</a>
+				<a href="/Downloads" class="item">
+					<div class="nav-clients" runat="server">Клиентам</div>
+				</a>
+				<a href="/About" class="item tablet mobile">
+					<div class="nav-about" runat="server">О компании</div>
+				</a>
+				<a href="/Contacts" class="item tablet mobile">
+					<div class="nav-contacts" runat="server">Контакты</div>
+				</a>
+			</div>
+		</div>
+	</header>
+
+
+    <%--<asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>--%>
+
+
     <form id="MasterForm" runat="server">
         <asp:ScriptManager runat="server" ID="ScriptManager1">
             <Services>
@@ -226,106 +280,164 @@ ga('send', 'pageview');
                 </asp:ContentPlaceHolder>
             </div>
         </div>
-        <div class="footer">
-            <div class="left">
-                <a href="/Production" style="display:block; margin-top:8px;">• Каталог</a>
-                <a href="/Contacts" style="display:block; margin-top:8px;">• Контакты</a>
-            </div>
-            <div class="center">
-                <div class="cont">
-                    <img src="https://zovofficial.com/catalog/view/theme/default/assets/svg/logo-white.svg"  style="height: 100px"/>
-                    <span class="f-text" style="padding-top:12px;">2022-2023 © ООО "ОМЦ-Профиль"</span>
+
+       <footer class="test-footer">
+		<div class="container">
+			<div class="footer">
+				<div class="links">
+					<ul>
+						<li><a href="/Main">Главная</a></li>
+						<li><a href="/Contacts">Контакты</a></li>
+						<li><a href="https://zovofficial.com/dealers/">Где купить</a></li>
+					</ul>
+				</div>
+				<div class="social">
+					<span>Мы в соцсетях:</span>
+					<div class="soc">
+						<a target="_blank" href="https://www.facebook.com/%D0%A1-%D0%9E%D0%9E%D0%9E-%D0%97%D0%9E%D0%92-%D0%9F%D1%80%D0%BE%D1%84%D0%B8%D0%BB%D1%8C-150153668848633/"><img src="/Images/facebook.svg" alt=""></a>
+						<a target="_blank" href="https://www.instagram.com/omcprofil.by/"><img src="/Images/instagram.svg" alt=""></a>
+						<a target="_blank" href="https://t.me/OMC_Profil"><img src="/Images/telegram.svg" alt=""></a>
+						<%--<a href="#"><img src="/Images/whatsapp.svg" alt=""></a>--%>
+					</div>
+				</div>
+				<div class="copyright">2017-2024 © ООО "ОМЦ-Профиль"</div>
+				<div></div>
+				<div class="address">
+					<span>Адрес фабрики и склада</span>
+					<span>ул. Герасимовича, 1-3</span>
+					<span>230011 г. Гродно</span>
+					<span>Республика Беларусь</span>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+        <%--<script type="text/javascript">
+            function positionFooter() {
+                var footer = document.querySelector('.test-footer');
+
+                var header = document.querySelector('header');
+                var body = document.querySelector('#MasterForm');
+
+                var bodyHeight = header.offsetHeight + body.offsetHeight;
+                var windowHeight = window.innerHeight;
+
+                console.log("header", header.offsetHeight, "body", body.offsetHeight, "fbody", bodyHeight, "window", windowHeight);
+
+                if (bodyHeight < windowHeight) {
+                    footer.style.position = 'fixed';
+                    footer.style.bottom = '0';
+                } else {
+                    footer.style.position = 'static';
+                }
+            }
+
+            positionFooter(); // Вызов функции при загрузке страницы
+
+            window.addEventListener('resize', positionFooter); // Вызов функции при изменении размера окна
+        </script>--%>
+
+
+
+    </form>
+
+
+    <div id="MessageDialogModal" class="modal">    
+        <div class="modal-content">
+             <div  class="info">
+                 <div class="info-block">
+                    <span class="text-span">ФИО*</span>  
+                    <input id="NameInput" type="text" class="name-input" />
+                </div>
+                <div class="info-block">
+                    <span class="text-span">Название компании</span>  
+                    <input id="CompanyInput" type="text" class="name-input"/>
+                </div>
+             </div>
+            <div class="info">
+                <div class="info-block">
+                    <span class="text-span">Email*</span>  
+                    <input id="EmailInput" type="text" class="name-input"/>
+                </div>
+                <div class="info-block">
+                    <span class="text-span">Телефон</span>  
+                    <input id="PhoneInput" type="text" class="name-input" />
                 </div>
             </div>
-            <div class="right">
-                <span style="text-align:right; font-family:OpenSans-Semibold; color:white; font-size:14px;">Адрес фабрики и склада</span>
-                <span class="f-text" style="font-size:14px; padding-top:12px;">ул. Герасимовича 1-3<br />230011 г. Гродно<br />Республика Беларусь</span>
-            </div>
-        </div>
-    </form>
-    <div class="modal fade" id="MessageDialogModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="font-family:OpenSans-Regular, sans-serif,  Arial;">
-        <div class="modal-dialog" runat="server" style="width:650px; height:525px; margin:120px auto;">
-            <div class="modal-content" runat="server" style="width:100%; height:100%;">
-                <div class="modal-cont">
-                    <div style="float:left">
-                        <span class="text-span">ФИО*</span>  
-                        <input id="NameInput" type="text" class="name-input" />
+            <div style="clear:left; margin-top:20px">
+                <span class="text-span">Тип компании*</span>
+                <div class="radio-wrapper">
+                    <div class="radio-button">
+                        <input type="radio" id="FRadio" name="type" value="F" checked="checked" />
+                        <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Физ. лицо</label>
                     </div>
-                    <div style="overflow:hidden; padding-left:20px;">
-                        <span class="text-span">Название компании</span>  
-                        <input id="CompanyInput" type="text" class="name-input" style="width:300px;" />
+                    <div class="radio-button">
+                        <input type="radio" id="RRadio" name="type" value="R" />
+                        <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Розница</label>
                     </div>
-                    <div style="clear:left; margin-top:20px;">
-                        <div style="overflow:hidden; float:left">
-                            <span class="text-span">Email*</span>  
-                            <input id="EmailInput" type="text" class="name-input" style="width:300px;" />
-                        </div>
-                        <div style="overflow:hidden; padding-left:20px;">
-                            <span class="text-span">Телефон</span>  
-                            <input id="PhoneInput" type="text" class="name-input" />
-                        </div>
+                    <div class="radio-button">
+                        <input type="radio" id="MRadio"  name="type" value="M"/>
+                        <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Мелкий опт</label>
                     </div>
-                    <div style="clear:left; margin-top:20px">
-                        <span class="text-span">Тип компании*</span>
-                        <div style="margin-top:10px;">
-                            <div style="float:left">
-                                <input type="radio" id="FRadio" name="type" value="F" checked="checked" />
-                                <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Физ. лицо</label>
-                            </div>
-                            <div style="float:left; margin-left:15px;">
-                                <input type="radio" id="RRadio" name="type" value="R" />
-                                <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Розница</label>
-                            </div>
-                            <div style="float:left; margin-left:15px;">
-                                <input type="radio" id="MRadio"  name="type" value="M"/>
-                                <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Мелкий опт</label>
-                            </div>
-                            <div style="float:left; margin-left:15px;">
-                                <input type="radio" id="KRadio"  name="type" value="K"/>
-                                <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Крупный опт</label>
-                            </div>
-                            <div style="float:left; margin-left:15px;">
-                                <input type="radio" id="DRadio"  name="type" value="D"/>
-                                <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Диз. студия</label>
-                            </div>
-                        </div>
+                    <div class="radio-button">
+                        <input type="radio" id="KRadio"  name="type" value="K"/>
+                        <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Крупный опт</label>
+                    </div>
+                    <div class="radio-button">
+                        <input type="radio" id="DRadio"  name="type" value="D"/>
+                        <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Диз. студия</label>
+                    </div>
+                </div>
                         
-                    </div>
-                    <div style="clear:left; margin-top:20px">
-                        <span class="text-span">Интересующая продукция*</span>
-                        <div style="margin-top:10px;">
-                            <div style="float:left">
-                                <input type="radio" id="PRadio" name="prod" value="P" checked="checked" />
-                                <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Профиль</label>
-                            </div>
-                            <div style="float:left; margin-left:15px;">
-                                <input type="radio" id="FrRadio" name="prod" value="Fr"/>
-                                <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Фасады</label>
-                            </div>
-                            <div style="float:left; margin-left:15px;">
-                                <input type="radio" id="MeRadio"  name="prod" value="Me"/>
-                                <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Мебель</label>
-                            </div>
-                            <div style="float:left; margin-left:15px;">
-                                <input type="radio" id="IRadio"  name="prod" value="I"/>
-                                <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Интерьерные панели</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="clear:left">
-                        <span style="display:block; margin-top:10px">Текст</span>
-                        <textarea id="TextInput" class="text-input"></textarea>
-                    </div>
-                    
-                    <div style="padding-top:15px; text-align:center; width:100%;">
-                        <div style="display:inline-block">
-                            <div id="SendButton" class="sendbutton" onclick="SendMessage()">Отправить</div>
-                            <span class="cancelbutton" onclick="$('#MessageDialogModal').modal('hide')">Отмена</span>
-                        </div>
-                    </div>
-                </div>              
             </div>
-        </div>
+            <div style="clear:left; margin-top:20px">
+                <span class="text-span">Интересующая продукция*</span>
+                <div class="radio-wrapper">
+                    <div class="radio-button">
+                        <input type="radio" id="PRadio" name="prod" value="P" checked="checked" />
+                        <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Профиль</label>
+                    </div>
+                    <div class="radio-button">
+                        <input type="radio" id="FrRadio" name="prod" value="Fr"/>
+                        <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Фасады</label>
+                    </div>
+                    <div class="radio-button">
+                        <input type="radio" id="MeRadio"  name="prod" value="Me"/>
+                        <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Мебель</label>
+                    </div>
+                    <div class="radio-button">
+                        <input type="radio" id="IRadio"  name="prod" value="I"/>
+                        <label for="PersonRadio" style="font-family:OpenSans-Regular; font-size:15px; font-weight:100; margin-left:5px;">Интерьерные панели</label>
+                    </div>
+                </div>
+            </div>
+            <div style="clear:left">
+                <span style="display:block; margin-top:10px">Текст</span>
+                <textarea id="TextInput" class="text-input"></textarea>
+            </div>
+                    
+            <div style="padding-top:15px; text-align:center; width:100%;">
+                <div style="display:inline-block">
+                    <div id="SendButton" class="sendbutton" onclick="SendMessage()">Отправить</div>
+                    <span class="cancelbutton" onclick="hideModal()">Отмена</span>
+                </div>
+            </div>
+        </div>       
+
     </div>
+
+<script>
+    function hideModal() {
+        var modal = document.getElementById("MessageDialogModal");
+        modal.style.display = "none";
+    }
+    function showModal() {
+        var modal = document.getElementById("MessageDialogModal");
+        modal.style.display = "block";
+
+        $('.header-burger, .menu-overlay').removeClass('active');
+    }
+</script>
 </body>
 </html>

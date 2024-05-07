@@ -1,54 +1,92 @@
-﻿<%@ Page Title="Информация для клиентов – фабрика ЗОВ-Профиль" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Downloads.aspx.cs" ClientIDMode="Static" Inherits="Zovprofil.zovprofil.Downloads" %>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
+﻿<%@ Page Title="Информация для клиентовz" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Downloads.aspx.cs" ClientIDMode="Static" Inherits="Zovprofil.zovprofil.Downloads" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
 
     <link href="../Styles/downloads.css" rel="stylesheet" />
 
-    <div style="text-align:center">
-        <div style="width:1000px; display:inline-block; margin-top:30px; padding: 0 10px;">
-            <div id="MainDescriptionDiv" style="display:block;font-size:15px; text-align:justify; line-height:25px; margin-right:46px; margin-bottom:30px;
-">Мы рады предоставить своим клиентам всю необходимую информацию по нашей продукции. 
-В разделах «Каталоги» и «Презентации» Вы найдете актуальные материалы по мебельным фасадам и погонажному профилю. 
-Памятки и информацию о скидках содержит раздел «Информация». 
-Для изучения типовых договоров и схем сборки мебели посетите раздел «Документы». 
-Дизайнерам и проектировщикам предлагаем скачать прорисованные в программах 3ds Max и PRO100 
-элементы мебели и стеновых панелей в подразделе «Библиотека для 3D-проектирования».<br /><br />
-Мы всегда стремимся к взаимовыгодному сотрудничеству с новыми оптовыми и розничными клиентами, 
-а также индивидуальными предпринимателями. 
-Воспользуйтесь разделами «Информация» и «Презентации», 
-чтобы узнать об условиях сотрудничества, географии поставок и ценовой программе.</div>
+    <div class="container">
+        <div class="text">
+            Мы рады предоставить своим клиентам всю необходимую информацию по нашей продукции. 
+            В разделах «Каталоги» и «Презентации» Вы найдете актуальные материалы по мебельным фасадам и погонажному профилю. 
+            Памятки и информацию о скидках содержит раздел «Информация». 
+            Для изучения типовых договоров и схем сборки мебели посетите раздел «Документы». 
+            Дизайнерам и проектировщикам предлагаем скачать прорисованные в программах 3ds Max и PRO100 
+            элементы мебели и стеновых панелей в подразделе «Библиотека для 3D-проектирования».<br /><br />
+            Мы всегда стремимся к взаимовыгодному сотрудничеству с новыми оптовыми и розничными клиентами, 
+            а также индивидуальными предпринимателями. 
+            Воспользуйтесь разделами «Информация» и «Презентации», 
+            чтобы узнать об условиях сотрудничества, географии поставок и ценовой программе.
+        </div>
 
-            <div style="background-color:white; display:inline-block; float:left;  width:268px; border: 1px solid #ededed;">
-                <div style="text-align:left; padding-left:15px;">
-                    <div id="Info" class="men-item-sel"  onclick="SelectItem(this)">
-                        ИНФОРМАЦИЯ
-                        <img src="/Images/right.png" style="float:right; padding-top:9px; padding-right:15px;" />
+        <div class="category-wrapper">
+                <div id="Info" class="men-item"  onclick="SelectItem(this)">
+                    ИНФОРМАЦИЯ
+                    <div class="image-container">
+                        <img src="/Images/right.png" style="padding-top:9px; padding-right:15px;" />
                     </div>
-                    <div id="Catalogs" class="men-item"  onclick="SelectItem(this)">
-                        КАТАЛОГИ
-                        <img src="/Images/right.png" style="float:right; padding-top:9px; padding-right:15px;" />
+                </div>
+                <div id="Catalogs" class="men-item"  onclick="SelectItem(this)">
+                    КАТАЛОГИ
+                    <div class="image-container">
+                        <img src="/Images/right.png" style="padding-top:9px; padding-right:15px;" />
                     </div>
-                    <div id="Docs" class="men-item"  onclick="SelectItem(this)">
-                        ДОКУМЕНТЫ
-                        <img src="/Images/right.png" style="float:right; padding-top:9px; padding-right:15px;" />
+                </div>
+                <div id="Docs" class="men-item"  onclick="SelectItem(this)">
+                    ДОКУМЕНТЫ
+                    <div class="image-container">
+                        <img src="/Images/right.png" style="padding-top:9px; padding-right:15px;" />
                     </div>
-                    <div id="3D"  class="men-item"  onclick="SelectItem(this)">
-                        3D ПРОЕКТИРОВАНИЕ 
-                        <img src="/Images/right.png" style="float:right; padding-top:9px; padding-right:15px;" />
+                </div>
+                <div id="3D"  class="men-item"  onclick="SelectItem(this)">
+                    3D ПРОЕКТИРОВАНИЕ
+                    <div class="image-container">
+                        <img src="/Images/right.png" style="padding-top:9px; padding-right:15px;" />
                     </div>
-                    <div id="Pres"  class="men-item"  onclick="SelectItem(this)">
-                        ПРЕЗЕНТАЦИИ
-                        <img src="/Images/right.png" style="float:right; padding-top:9px; padding-right:15px;" />
+                </div>
+                <%--<div id="Present"  class="men-item"  onclick="SelectItem(this)">
+                    ПРЕЗЕНТАЦИИ
+                    <div class="image-container">
+                        <img src="/Images/right.png" style="padding-top:9px; padding-right:15px;" />
                     </div>
-                    <div id="Pres1"  class="men-item"  onclick="SelectItem(this)">
-                        !!!!!!!!!!!!!!!
-                        <img src="/Images/right.png" style="float:right; padding-top:9px; padding-right:15px;" />
+                </div>  --%>     
+            <div id="Schemes"  class="men-item"  onclick="SelectItem(this)">
+                    ПРЕЗЕНТАЦИИ
+                    <div class="image-container">
+                        <img src="/Images/right.png" style="padding-top:9px; padding-right:15px;" />
                     </div>
                 </div>
             </div>
 
-            <div style="display:inline-block; width:680px; text-align:left">
-                <div id="CatalogsCont" style="display:none">
-                     <div class="downitem">
+        <div class="files-wrapper">
+            <div id="InfoCont" style="">
+                <div class="downitem">
+                        <img src="/Images/WordFile.png" class="file-ic" />
+                        <div class="data">
+                            <span class="name">Памятка корпоративному клиенту</span>
+                            <span class="desc">Рекомендации по эксплуатации мебельных фасадов и погонажных изделий, условия
+исполнения гарантийных обязательств.</span>
+                        </div>
+                        <a href="/Files/Памятка корпоративному клиенту.doc">
+                           <div class="down-but">
+                                <img src="/Images/download.png" class="download" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="downitem">
+                        <img src="/Images/PDFFile.png" class="file-ic" />
+                        <div class="data">
+                            <span class="name">Информация о скидках - 2019</span>
+                            <span class="desc">Ценовая программа компаний, шкала коэффициентов для стандартных и нестандартных
+погонажных изделий.</span>
+                        </div>
+                        <a href="/Files/О скидках 2019 год.pdf">
+                            <div class="down-but">
+                                <img src="/Images/download.png" class="download" />
+                            </div>
+                        </a>
+                    </div>
+            </div>
+            <div id="CatalogsCont" style="display:none">
+                <div class="downitem">
                         <img src="/Images/PDFFile.png" class="file-ic" />
                         <div class="data">
                             <span class="name">ЗОВ-ПРОФИЛЬ. Фасады (2018-2019)</span>
@@ -139,62 +177,9 @@
                             </div>
                         </a>
                     </div>
-                </div>    
-                <div id="3DCont" style="display:none">
-                    <div class="downitem">
-                        <img src="/Images/ArchiveFile.png" class="file-ic" />
-                        <div class="data">
-                            <span class="name">PRO100 Стеновые панели</span>
-                            <span class="desc">Прорисованные в программе PRO100 элементы стеновых панелей: материалы, лепнина,
-профиля и готовые решения. Материал будет полезен дизайнерам и проектировщикам.</span>
-                        </div>
-                        <a href="/Files/PRO100 Стеновые панели.zip">
-                            <div class="down-but">
-                                <img src="/Images/download.png" class="download" />
-                            </div>
-                        </a>
-                    </div>
-                    <div class="downitem">
-                        <img src="/Images/ArchiveFile.png" class="file-ic" />
-                        <div class="data">
-                            <span class="name">PRO100 Материалы и элементы</span>
-                            <span class="desc">Прорисованные в программе PRO100 материалы, декоры и декоративные элементы к кухонным фасадам. Рекомендуется для скачивания дизайнерами и проектировщиками.</span>
-                        </div>
-                        <a href="/Files/Дополнение к программе Pro100-5.20 от ЗОВ-Профиль.rar">
-                            <div class="down-but">
-                                <img src="/Images/download.png" class="download" />
-                            </div>
-                        </a>
-                    </div>
-                    <div class="downitem">
-                        <img src="/Images/ArchiveFile.png" class="file-ic" />
-                        <div class="data">
-                            <span class="name">3ds Max Модели мебели</span>
-                            <span class="desc">Прорисованные в программе 3D Max элементы мебели коллекций «Патриция»,
-«Норманн» и «КУБ», текстуры используемых пленок. Материал будет полезен
-дизайнерам и проектировщикам.</span>
-                        </div>
-                        <a href="/Files/3ds Max Модели мебели.zip">
-                            <div class="down-but">
-                                <img src="/Images/download.png" class="download" />
-                            </div>
-                        </a>
-                    </div>
-                    <div class="downitem">
-                        <img src="/Images/ArchiveFile.png" class="file-ic" />
-                        <div class="data">
-                            <span class="name">PRO100 Элементы КУБ</span>
-                            <span class="desc">Прорисованные в программе PRO100 элементы мебели коллекции «КУБ», цвета используемых декоров. Материал будет полезен дизайнерам и продавцам мебели.</span>
-                        </div>
-                        <a href="/Files/КУБ.rar">
-                            <div class="down-but">
-                                <img src="/Images/download.png" class="download" />
-                            </div>
-                        </a>
-                    </div>
-                </div>  
-                <div id="DocsCont" style="display:none">
-                    <div class="downitem">
+            </div>    
+            <div id="DocsCont" style="display:none">
+                <div class="downitem">
                         <img src="/Images/PDFFile.png" class="file-ic" />
                         <div class="data">
                             <span class="name">Бланк претензии ЗОВ-ПРОФИЛЬ</span>
@@ -692,9 +677,62 @@
                             </div>
                         </a>
                     </div>
-                </div> 
-                <div id="PresCont" style="display:none">
+            </div> 
+            <div id="3DCont" style="display:none">
+                <div class="downitem">
+                        <img src="/Images/ArchiveFile.png" class="file-ic" />
+                        <div class="data">
+                            <span class="name">PRO100 Стеновые панели</span>
+                            <span class="desc">Прорисованные в программе PRO100 элементы стеновых панелей: материалы, лепнина,
+профиля и готовые решения. Материал будет полезен дизайнерам и проектировщикам.</span>
+                        </div>
+                        <a href="/Files/PRO100 Стеновые панели.zip">
+                            <div class="down-but">
+                                <img src="/Images/download.png" class="download" />
+                            </div>
+                        </a>
+                    </div>
                     <div class="downitem">
+                        <img src="/Images/ArchiveFile.png" class="file-ic" />
+                        <div class="data">
+                            <span class="name">PRO100 Материалы и элементы</span>
+                            <span class="desc">Прорисованные в программе PRO100 материалы, декоры и декоративные элементы к кухонным фасадам. Рекомендуется для скачивания дизайнерами и проектировщиками.</span>
+                        </div>
+                        <a href="/Files/Дополнение к программе Pro100-5.20 от ЗОВ-Профиль.rar">
+                            <div class="down-but">
+                                <img src="/Images/download.png" class="download" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="downitem">
+                        <img src="/Images/ArchiveFile.png" class="file-ic" />
+                        <div class="data">
+                            <span class="name">3ds Max Модели мебели</span>
+                            <span class="desc">Прорисованные в программе 3D Max элементы мебели коллекций «Патриция»,
+«Норманн» и «КУБ», текстуры используемых пленок. Материал будет полезен
+дизайнерам и проектировщикам.</span>
+                        </div>
+                        <a href="/Files/3ds Max Модели мебели.zip">
+                            <div class="down-but">
+                                <img src="/Images/download.png" class="download" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="downitem">
+                        <img src="/Images/ArchiveFile.png" class="file-ic" />
+                        <div class="data">
+                            <span class="name">PRO100 Элементы КУБ</span>
+                            <span class="desc">Прорисованные в программе PRO100 элементы мебели коллекции «КУБ», цвета используемых декоров. Материал будет полезен дизайнерам и продавцам мебели.</span>
+                        </div>
+                        <a href="/Files/КУБ.rar">
+                            <div class="down-but">
+                                <img src="/Images/download.png" class="download" />
+                            </div>
+                        </a>
+                    </div>
+            </div>  
+            <div id="SchemesCont" style="display:none">
+                <div class="downitem">
                         <img src="/Images/PDFFile.png" class="file-ic" />
                         <div class="data">
                             <span class="name">Новинки фасадов 2017-2018</span>
@@ -707,7 +745,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="downitem">
+                <div class="downitem">
                         <img src="/Images/PDFFile.png" class="file-ic" />
                         <div class="data">
                             <span class="name">Информация по сотрудничеству</span>
@@ -720,78 +758,6 @@
                             </div>
                         </a>
                     </div>
-                </div>
-
-                <div id="Pres1Cont" style="display:none">
-                    <div class="downitem">
-                        <img src="/Images/PDFFile.png" class="file-ic" />
-                        <div class="data">
-                            <span class="name">!!!!!!!!!!!!!Новинки фасадов 2017-2018!!!!!!!!!!!!!!!</span>
-                            <span class="desc">Презентационный материал по новинкам фасадов с технической информацией для
-существующих клиентов компаний.</span>
-                        </div>
-                        <a href="/Files/Новинки фасадов 2017-2018.pdf">
-                            <div class="down-but">
-                                <img src="/Images/download.png" class="download" />
-                            </div>
-                        </a>
-                    </div>
-                    <div class="downitem">
-                        <img src="/Images/PDFFile.png" class="file-ic" />
-                        <div class="data">
-                            <span class="name">Информация по сотрудничеству</span>
-                            <span class="desc">Презентационный материал для дилеров о фабрике, существующем ассортименте,
-условиям отгрузки и упаковки готовой продукции.</span>
-                        </div>
-                        <a href="/Files/Информация по сотрудничеству.pdf">
-                            <div class="down-but">
-                                <img src="/Images/download.png" class="download" />
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div id="InfoCont" style="">
-                    <div class="downitem">
-                        <img src="/Images/WordFile.png" class="file-ic" />
-                        <div class="data">
-                            <span class="name">Памятка корпоративному клиенту</span>
-                            <span class="desc">Рекомендации по эксплуатации мебельных фасадов и погонажных изделий, условия
-исполнения гарантийных обязательств.</span>
-                        </div>
-                        <a href="/Files/Памятка корпоративному клиенту.doc">
-                           <div class="down-but">
-                                <img src="/Images/download.png" class="download" />
-                            </div>
-                        </a>
-                    </div>
-                    <div class="downitem">
-                        <img src="/Images/PDFFile.png" class="file-ic" />
-                        <div class="data">
-                            <span class="name">Информация о скидках - 2019</span>
-                            <span class="desc">Ценовая программа компаний, шкала коэффициентов для стандартных и нестандартных
-погонажных изделий.</span>
-                        </div>
-                        <a href="/Files/О скидках 2019 год.pdf">
-                            <div class="down-but">
-                                <img src="/Images/download.png" class="download" />
-                            </div>
-                        </a>
-                    </div>
-                    <%--<div class="downitem">
-                        <img src="/Images/WordFile.png" class="file-ic" />
-                        <div class="data">
-                            <span class="name">Прейскурант на фасады</span>
-                            <span class="desc">Отпускные цены на фасады для новых клиентов (организаций и юр. лиц) без скидок и
-НДС.</span>
-                        </div>
-                        <a href="/Files/Прейскурант на фасады.docx">
-                            <div class="down-but">
-                                <img src="/Images/download.png" class="download" />
-                            </div>
-                        </a>
-                    </div>--%>
-                </div>
             </div>
         </div>
     </div>

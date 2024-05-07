@@ -15,39 +15,39 @@ namespace Zovprofil.zovprofil
     {
 
         /// <summary>
-        /// hSlidesCount элемент управления.
+        /// NewProductsContainer1 элемент управления.
         /// </summary>
         /// <remarks>
-        /// Автоматически созданное поле.
+        /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputHidden hSlidesCount;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl NewProductsContainer1;
 
         /// <summary>
-        /// ImagesSliderCont элемент управления.
+        /// NewProductsRepeater1 элемент управления.
         /// </summary>
         /// <remarks>
-        /// Автоматически созданное поле.
+        /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ImagesSliderCont;
+        protected global::System.Web.UI.WebControls.Repeater NewProductsRepeater1;
 
         /// <summary>
-        /// SliderNavCont элемент управления.
+        /// NewProductsContainer2 элемент управления.
         /// </summary>
         /// <remarks>
-        /// Автоматически созданное поле.
+        /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl SliderNavCont;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl NewProductsContainer2;
 
         /// <summary>
-        /// NewProductsContainer элемент управления.
+        /// NewProductsRepeater2 элемент управления.
         /// </summary>
         /// <remarks>
-        /// Автоматически созданное поле.
+        /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl NewProductsContainer;
+        protected global::System.Web.UI.WebControls.Repeater NewProductsRepeater2;
     }
 }

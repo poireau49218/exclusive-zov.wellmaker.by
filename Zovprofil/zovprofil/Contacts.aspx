@@ -360,12 +360,12 @@
             </div>
         </div>
         <div class="contacts">
-            <div class="contact-item">
+            <%--<div class="contact-item">
                 <img src="/Images/img_avatar.png" alt="Alternate Text" class="contact-avatar"/>
                 <span class="contact-name">Юрий Янкойть</span>
                 <span class="contact-post">главный технолог</span>
                 <span class="contact-phone">моб. +375 (29) 180-18-45</span>
-            </div>
+            </div>--%>
         </div>
     </div>
     <div class="block">

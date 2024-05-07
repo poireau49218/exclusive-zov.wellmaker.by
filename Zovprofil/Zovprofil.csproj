@@ -182,9 +182,11 @@
   <ItemGroup>
     <Content Include="CheckBox.ascx" />
     <Content Include="home\produkcziya\korpusnay-mebel\patricziya1.html" />
+    <Content Include="Scripts\burger.js" />
     <Content Include="Scripts\Infinium.js" />
     <Content Include="Scripts\jquery-1.11.2.min.js" />
     <Content Include="Scripts\mscr.js" />
+    <Content Include="Scripts\swiper.js" />
     <Content Include="Scripts\where.js" />
     <Content Include="Scripts\xregexp-all-min.js" />
     <Content Include="Service.asmx" />

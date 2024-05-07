@@ -1,31 +1,343 @@
-﻿<%@ Page Title="Фабрика мебельных комплектующих ЗОВ-Профиль" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" ClientIDMode="Static" CodeBehind="Main.aspx.cs" Inherits="Zovprofil.zovprofil.Main" %>
+﻿<%@ Page Title="Фабрика мебельных комплектующих ОМЦ-Профиль" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" ClientIDMode="Static" CodeBehind="Main.aspx.cs" Inherits="Zovprofil.zovprofil.Main" %>
 <asp:Content ID="MainContent" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
     <link href="../Styles/main.css" rel="stylesheet" />
-    <input type="hidden" runat="server" id="hSlidesCount" />
-    <div class="im-sl-back noselect">
-        <div>
-            <div id="ImagesSliderCont" runat="server">
-                <div>
-                    <div class="nav" id="SliderNavCont" runat="server"></div>
+
+
+    <%--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>--%>
+
+
+    <%--<input type="hidden" runat="server" id="hSlidesCount" />
+        <div class="im-sl-back noselect">
+            <div>
+                <div id="ImagesSliderCont" runat="server">
+                    <div>
+                        <div class="nav" id="SliderNavCont" runat="server"></div>
+                    </div>
+                </div>
+                <div class="image-nameee image-name">
+                    <i class="fa-sharp fa-regular fa-circle-question fa-2x" data-html="true" data-toggle="tooltip" data-placement="top" title="<u><b>Нажмите один раз</b></u> на картинку, чтобы перейти к нужному товару. <u><b>Двойное нажатие</b></u> откроет картинку для просмотра"></i>
                 </div>
             </div>
-            
+        </div>--%>
+
+
+
+
+
+
+
+    <!-- Slider main container -->
+	<div class="swiper swiper-main" rewind="true">
+	  <!-- Additional required wrapper -->
+	  <div class="swiper-wrapper">
+
+	    <!-- Slides -->
+	    <div class="swiper-slide">
+	    	<div class="block">
+		      	<div class="sub-block">
+		          <div class="sub-content">
+					<h1>Фасады</h1>
+					<div class="text">
+					Мебельные фасады для кухонь, гостиных, гардеробов и другой корпусной мебели
+					</div>
+                    <button class="slider-button"><a href="/Production?type=0" style="color: white">Подробнее</a></button>
+		          </div>
+		        </div>
+		      <div class="image">
+		        <img src="/Images/fronts.jpg" alt=""/>
+		        <div class="sub-block">
+		          <h1>Фасады</h1>
+		          <div class="text">
+		            Мебельные фасады для кухонь, гостиных,<br> гардеробов и другой корпусной мебели
+		          </div>
+		          <button class="slider-button"><a href="/Production?type=0" style="color: white">Подробнее</a></button>
+		        </div>
+		      </div>
+		    </div>
+	    </div>
+	    <div class="swiper-slide">
+	    	<div class="block">
+		      	<div class="sub-block">
+		          <div class="sub-content">
+					<h1>Интерьерные декоры и погонаж</h1>
+					<div class="text">
+					Декоротивные элементы придают кухне особенный индивидуальный вид.
+					</div>
+                    <button class="slider-button"><a href="/Production?type=5" style="color: white">Подробнее</a></button>
+		          </div>
+		        </div>
+		      <div class="image">
+		        <img src="/Images/decors.jpg" alt=""/>
+		        <div class="sub-block">
+		          <h1>Интерьерные декоры и погонаж</h1>
+		          <div class="text">
+		            Декоротивные элементы придают кухне особенный индивидуальный вид.
+		          </div>
+		          <button  class="slider-button"><a href="/Production?type=5" style="color: white">Подробнее</a></button>
+		        </div>
+		      </div>
+		    </div>
+	    </div>
+        <div class="swiper-slide">
+	        <div class="block">
+		        <div class="sub-block">
+		            <div class="sub-content">
+				    <h1>Рекламная продукция</h1>
+				    <div class="text">
+				    Широкий выбор рекламных материалов и образцов для оформления магазинов и выставочных салонов.
+				    </div>
+                    <button  class="slider-button"><a href="/Production?type=1" style="color: white">Подробнее</a></button>
+		            </div>
+		        </div>
+		        <div class="image">
+		        <img src="/Images/pogon.jpg" alt=""/>
+		        <div class="sub-block">
+		            <h1>Декор и погонаж</h1>
+		            <div class="text">
+		            Широкий выбор рекламных материалов и образцов для оформления магазинов и выставочных салонов.
+		            </div>
+		            <button  class="slider-button"><a href="/Production?type=1" style="color: white">Подробнее</a></button>
+		        </div>
+		        </div>
+		    </div>
+	    </div>
+        <%--<div class="swiper-slide">
+	        <div class="block">
+		        <div class="sub-block">
+		            <div class="sub-content">
+				    <h1>Мебель</h1>
+				    <div class="text">
+				    В нашем каталоге мебели можно выбрать как классические модели гостиных и стенок, так и ультра современные комплекты.
+				    </div>
+                    <button><a href="/Production?type=2" style="color: white">Подробнее</a></button>
+		            </div>
+		        </div>
+		        <div class="image">
+		        <img src="/Images/furniture.png" alt=""/>
+		        <div class="sub-block">
+		            <h1>Мебель</h1>
+		            <div class="text">
+		            В нашем каталоге мебели можно выбрать как классические модели <br> гостиных и стенок, так и ультра современные комплекты.
+		            </div>
+		            <button><a href="/Production?type=2" style="color: white">Подробнее</a></button>
+		        </div>
+		        </div>
+		    </div>
+	    </div>--%>
+	  </div>
+
+	  <div class="swiper-scrollbar"></div>
+	</div>
+
+
+
+
+
+
+    <div class="container">
+		<h1 class="h1-header">ФАСАДЫ РАМОЧНЫЕ И ДЕКОРАТИВНЫЕ ЭЛЕМЕНТЫ ДЛЯ МЕБЕЛИ И ИНТЕРЬЕРА</h1>
+		<div class="categories">
+			<div class="category">
+				<a href="/Production?type=0">
+					<div class="cat-image">
+						<img src="/Images/fronts.jpg" alt=""/>
+					</div>
+					<h3>Фасады</h3>
+				</a>
+			</div>
+			<div class="category">
+				<a href="/Production?type=1">
+					<div class="cat-image">
+						<img src="/Images/decors.jpg" alt=""/>
+					</div>
+					<h3>Интерьерные декоры и погонаж</h3>
+				</a>
+			</div>
+			<div class="category">
+				<a href="/Production?type=4">
+					<div class="cat-image">
+						<img src="/Images/promotion-main.png" alt="" style="filter: drop-shadow(2px 4px 6px black)"/>
+					</div>
+					<h3>Рекламная продукция</h3>
+				</a>
+			</div>
+			<%--<div class="category">
+				<a href="/Production?type=2">
+					<div class="cat-image">
+						<img src="/Images/furniture.png" alt=""/>
+					</div>
+					<h3>Мебель</h3>
+				</a>
+			</div>
+			<div class="not_available category" >
+				<a href="/">
+					<div class="cat-image">
+						<img src="/Images/dec-elements.jpg" alt=""/>
+					</div>
+					<h3>Декор элементы</h3>
+				</a>
+			</div>
+			<div class="not_available category">
+				<a href="/">
+					<div class="cat-image">
+						<img src="/Images/plintus.jpeg" alt=""/>
+					</div>
+					<h3>Плинтуса и наличники</h3>
+				</a>
+			</div>--%>
+		</div>
+
+
+
+		<h1 class="h1-header">О НАС</h1>
+		<div class="about">
+			<div class="no-swiper">
+				<div class="about-block">
+					<div class="about-text">Вот уже <b>более 20</b> лет ООО «ОМЦ-Профиль» работает в мебельной индустрии и создаёт широкий ассортимент мебельных фасадов и декоративных элементов: багетов, балюстрад, пилястр, плинтусов. Наши изделия широко применяются для производства кухонной мебели, но с таким же успехом могут применятся для изготовления гардеробов, шкафов и тумб для любых жилых помещений. </div>
+					<div class="about-image">
+						<img src="/Images/about-1.jpg" alt=""/>
+						<div class="about-text">Вот уже <b>более 20</b> лет ООО «ОМЦ-Профиль» работает в мебельной индустрии и создаёт широкий ассортимент мебельных фасадов и декоративных элементов: багетов, балюстрад, пилястр, плинтусов. Наши изделия широко применяются для производства кухонной мебели, но с таким же успехом могут применятся для изготовления гардеробов, шкафов и тумб для любых жилых помещений. </div>
+					</div>
+				</div>
+				<div class="about-block">
+					<div class="about-image">
+						<img src="/Images/about-2.jpg" alt=""/>
+						<div class="about-text">Мы так – же выпускаем изделия для оформления интерьера: декоративную рейку, реечные панели, плинтуса, консоли, багеты, наличники. Начиная с 2015 года, компания производит корпусную мебель для гостиной и спальни. Мы с уверенностью заявляем, что наша фабрика - <b>один из лидеров в РБ</b> по производству профиля из МДФ.</div>
+					</div>
+					<div class="about-text">Мы так – же выпускаем изделия для оформления интерьера: декоративную рейку, реечные панели, плинтуса, консоли, багеты, наличники. Начиная с 2015 года, компания производит корпусную мебель для гостиной и спальни. Мы с уверенностью заявляем, что наша фабрика - <b>один из лидеров в РБ</b> по производству профиля из МДФ.</div>
+				</div>
+				<div class="about-block">
+					<div class="about-text">Наши производственные цеха оборудованы <b>современным высокотехнологичным оборудованием лучших</b> немецких и итальянских брендов. Для облицовывания мы используем только немецкие клея и облицовочные материалы немецкого и японского производства. Что позволяет добиться <b>высокого качества</b> выпускаемой продукции. И <b>гарантировать</b> покупателю отличные эксплуатационные характеристики нашей продукции.</div>
+					<div class="about-image">
+						<img src="/Images/about-3.png" alt=""/>
+						<div class="about-text">Наши производственные цеха оборудованы <b>современным высокотехнологичным оборудованием лучших</b> немецких и итальянских брендов. Для облицовывания мы используем только немецкие клея и облицовочные материалы немецкого и японского производства. Что позволяет добиться <b>высокого качества</b> выпускаемой продукции. И <b>гарантировать</b> покупателю отличные эксплуатационные характеристики нашей продукции.</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="swiper swiper-main" rewind="true">
+			  <div class="swiper-wrapper">
+			    <div class="swiper-slide">
+			    	<div class="about-image">
+						<img src="/Images/about-1.jpg" alt=""/>
+						<div class="about-text">Вот уже <b>более 20</b> лет ООО «ОМЦ-Профиль» работает в мебельной индустрии и создаёт широкий ассортимент мебельных фасадов и декоративных элементов: багетов, балюстрад, пилястр, плинтусов. Наши изделия широко применяются для производства кухонной мебели, но с таким же успехом могут применятся для изготовления гардеробов, шкафов и тумб для любых жилых помещений. </div>
+					</div>
+			    </div>
+			    <div class="swiper-slide">
+			    	<div class="about-image">
+						<img src="/Images/about-2.jpg" alt=""/>
+						<div class="about-text">Мы так – же выпускаем изделия для оформления интерьера: декоративную рейку, реечные панели, плинтуса, консоли, багеты, наличники. Начиная с 2015 года, компания производит корпусную мебель для гостиной и спальни. Мы с уверенностью заявляем, что наша фабрика - <b>один из лидеров в РБ</b> по производству профиля из МДФ.</div>
+					</div>
+			    </div>
+			    <div class="swiper-slide">
+			    	<div class="about-image">
+						<img src="/Images/about-3.png" alt=""/>
+						<div class="about-text">Наши производственные цеха оборудованы <b>современным высокотехнологичным оборудованием лучших</b> немецких и итальянских брендов. Для облицовывания мы используем только немецкие клея и облицовочные материалы немецкого и японского производства. Что позволяет добиться <b>высокого качества</b> выпускаемой продукции. И <b>гарантировать</b> покупателю отличные эксплуатационные характеристики нашей продукции.</div>
+					</div>
+			    </div>
+			  </div>
+
+			  <div class="swiper-scrollbar"></div>
+			</div>
+
+			<div style="margin-top: 40px; margin-left: 15px; margin-right: 15px; text-align: center;">
+				Наши фасады, профиль и декоративные элементы можно купить в Гродно, Минске, Бресте, Гомеле, Витебске, Могилеве и других городах Беларуси. Мы поставляем нашу продукцию в Россию, Казахстан, Грузию и другие страны СНГ.
+			</div>
+		</div>
+
+		<h1 class="h1-header">НАШИ НАДЕЖНЫЕ ПОСТАВЩИКИ</h1>
+		<div class="suppliers">
+			<div style="text-align: center;">
+				Наша компания эффективно сотрудничает с некоторыми всемирно известными производителями
+			</div>
+			<div class="sup-logos">
+				<div class="sup-logo logo-1"><img src="/Images/sup-1.jpg" alt=""/></div>
+				<div class="sup-logo logo-2"><img src="/Images/sup-2.png" alt=""/></div>
+				<div class="sup-logo logo-3"><img src="/Images/sup-3.png" alt=""/></div>
+				<div class="sup-logo logo-4"><img src="/Images/sup-4.png" alt=""/></div>
+				<div class="sup-logo logo-5"><img src="/Images/sup-5.png" alt=""/></div>
+				<div class="sup-logo logo-6"><img src="/Images/sup-6.png" alt=""/></div>
+				<div class="sup-logo logo-7"><img src="/Images/sup-7.png" alt=""/></div>
+				<div class="sup-logo logo-8"><img src="/Images/sup-8.jpg" alt=""/></div>
+			</div>
+		</div>
+
+
+		<h1 class="h1-header">НОВИНКИ</h1>
+		<div class="latest">
+            <div id="NewProductsContainer1" runat="server" class="latest-fronts no-swiper" style="padding:0px 0px">
+                <asp:Repeater ID="NewProductsRepeater1" runat="server" OnItemDataBound="NewProductsRepeater1_ItemDataBound">
+                    <ItemTemplate>
+                        <div class="latest-front not_show_all">
+                            <a id="ProductLink1" runat="server" href='<%# Eval("URL") %>'>
+                                <div class="front-image">
+                                    <img id="ProductImageUrl1" runat="server" src='<%# Eval("ProductImageUrl") %>' alt=""/>
+                                </div>
+                                <div class="latest-text">
+                                    <asp:Label ID="Name1" runat="server" Text='<%# Eval("Name") %>'></asp:Label>
+                                </div>
+                            </a>
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </div>
+            <div id="ShowAllButtonContainer" style="text-align: center; margin: auto; margin-top: 70px;">
+                <button  class="slider-button" id="ShowAllButton" onclick="showAllProducts()">Смотреть все</button>
+            </div>
+            <script>
+                function showAllProducts() {
+                    event.preventDefault();
+                    var elements = document.querySelectorAll(".latest-front.not_show_all");
+                    for (var i = 0; i < elements.length; i++) {
+                        elements[i].classList.remove("not_show_all");
+                    }
+
+                    var buttonContainer = document.getElementById("ShowAllButtonContainer");
+                    buttonContainer.style.display = "none";
+                }
+            </script>
+
+
+
+            <div id="NewProductsContainer2" runat="server" class="swiper swiper-latest" rewind="true" style="padding:0px 0px">
+                <div class="swiper-wrapper">
+                    <asp:Repeater ID="NewProductsRepeater2" runat="server" OnItemDataBound="NewProductsRepeater2_ItemDataBound">
+                        <ItemTemplate>
+                            <div class="swiper-slide">
+                                <a id="ProductLink2" runat="server" href='<%# Eval("URL") %>'>
+                                    <div class="front-image">
+                                        <img id="ProductImageUrl2" runat="server" src='<%# Eval("ProductImageUrl") %>' alt=""/>
+                                    </div>
+                                    <div class="latest-text">
+                                        <asp:Label ID="Name2" runat="server" Text='<%# Eval("Name") %>'></asp:Label>
+                                    </div>
+                                </a>
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+
         </div>
-    </div>
-    <div class="hd">
-        <p>ПРОИЗВОДСТВО ПРОФИЛЯ ПОГОНАЖНОГО<br />И ФАСАДОВ В РЕСПУБЛИКЕ БЕЛАРУСЬ</p>
+
+    <%--<div class="hd">
+        <p>ПРОИЗВОДСТВО ПРОФИЛЯ ПОГОНАЖНОГО,<br />ФАСАДОВ И КОРПУСНОЙ МЕБЕЛИ В РЕСПУБЛИКЕ БЕЛАРУСЬ</p>
     </div>
     <div class="prod-cat-menu-cont noselect">
-        <%--<div class="item">
+        <div class="item">
             <a href="/Production?type=2">
                 <div class="img">
-                    <img src="/Images/Main/korp.png" ondragstart="return false;" />
+                    <img src="///Images/Main/korp.png" ondragstart="return false;" />
                 </div>
             </a>
             <span>Корпусная мебель</span>
-        </div>--%>
+        </div>
         <div class="item" style="">
-            <a href="/Production?type=0">
+            <a href="/Production?type=0"> 
                 <div class="img">
                     <img src="/Images/Main/front.png" ondragstart="return false;" />
                 </div>
@@ -40,15 +352,18 @@
             </a>
             <span>Декор и погонаж</span>
         </div>
-    </div>
-    <div class="prod-menu-cont noselect" style="background-color:#eeeeee;">
+    </div>--%>
+
+
+    <%--<div class="prod-menu-cont noselect" style="background-color:#eeeeee;">
         <div class="newprod-label">НОВИНКИ</div>
         <div class="pr-menu">
             <div id="NewProductsContainer" runat="server" class="pr-menu-cont" style="padding:0px 0px">
 
             </div>
         </div>
-        
+
+
     </div>
         <div style="text-align:center; padding-bottom:15px;">
             <div class="newprod-label">НАШИ ПРЕИМУЩЕСТВА</div>
@@ -57,20 +372,20 @@
                 <div style="display:inline-block; text-align:center;  width:307px;">
                     <div style="padding-right:100px;">
                         <span style="display:block; font-size:18px;">СОТРУДНИЧЕСТВО</span>
-                        <img src="/Images/handshake2.png" style="width:90px; display:inline-block; margin-top:15px;" />
+                        <img src="/Images/handshake.png" style="width:90px; display:inline-block; margin-top:15px;" />
                         <span style="display:block; font-size:15px; margin-top:6px;">С фабрикой или дилером</span>
                     </div>
                     
                 </div>
                 <div style="display:inline-block; text-align:center; width:307px;">
                     <span style="display:block; font-size:18px;">СРОК ПРОИЗВОДСТВА</span>
-                    <img src="/Images/calendar-and-clock2.png" style="width:84px; display:inline-block; margin-top:20px;" />
-                    <span style="display:block; font-size:15px; margin-top:7px;">от 2-х недель</span>
+                    <img src="/Images/calendar-and-clock.png" style="width:84px; display:inline-block; margin-top:20px;" />
+                    <span style="display:block; font-size:15px; margin-top:7px;">От 2-ух недель</span>
                 </div>
                 <div style="display:inline-block; text-align:center; width:307px;">
                     <div style="padding-left:100px;">
                         <span style="display:block; font-size:18px;">СКИДКИ</span>
-                        <img src="/Images/discount2.png" style="width:84px; display:inline-block; margin-top:20px;" />
+                        <img src="/Images/discount.png" style="width:84px; display:inline-block; margin-top:20px;" />
                         <span style="display:block; font-size:15px; margin-top:6px;">50% на образцы</span>
                     </div>
                 </div>
@@ -82,32 +397,42 @@
                     <div style="display:inline-block; text-align:center; width:307px;">
                         <div style="padding-right:100px;">
                             <span style="display:block; font-size:18px;">ЭКСКЛЮЗИВ</span>
-                            <img src="/Images/creative-process2.png" style="width:90px; display:inline-block; margin-top:15px;" />
+                            <img src="/Images/creative-process.png" style="width:90px; display:inline-block; margin-top:15px;" />
                             <span style="display:block; font-size:15px; margin-top:6px;">По чертежу заказчика</span>
                         </div>
                     </div>
                     <div style="display:inline-block; text-align:center; width:307px;">
                         <span style="display:block; font-size:18px;">РЕКЛАМА</span>
-                        <img src="/Images/signboard2.png" style="width:90px; display:inline-block; margin-top:15px;" />
-                        <span style="display:block;; font-size:15px; margin-top:6px;">Каталоги, образцы и др.</span>
+                        <img src="/Images/signboard.png" style="width:90px; display:inline-block; margin-top:15px;" />
+                        <span style="display:block; font-size:15px; margin-top:6px;">Каталоги, образцы и др.</span>
                     </div>
                     <div style="display:inline-block; text-align:center; width:307px;">
                         <div style="padding-left:100px;">
                             <span style="display:block; font-size:18px;">ПО ДЛЯ B2B</span>
-                            <img src="/Images/laptop2.png" style="width:90px; display:inline-block; margin-top:15px;" />
+                            <img src="/Images/laptop.png" style="width:90px; display:inline-block; margin-top:15px;" />
                             <span style="display:block; font-size:15px; margin-top:6px;">Контроль готовности заказа</span>
                         </div>
                     </div>
 
                 </div>
             </div>
-       </div>
+       </div>--%>
+
+
+
+
+    <%--было закоменчено--%>
     <%--<div style="text-align:center;">
         <div class="newprod-label">НОВОСТИ</div>
 
         <div id="NewsContainer" runat="server" style="display:inline-block"></div>
     </div>--%>
-    <div style="text-align:center; background-color:#eeeeee; padding-bottom:30px">
+
+
+
+
+
+    <%--<div style="text-align:center; background-color:#eeeeee; padding-bottom:30px">
         <div class="newprod-label">ВИДЕО С ПРОИЗВОДСТВА</div>
         <a target="_blank" href="https://youtu.be/PofQaXypH4E" style="">
             <img src="/Images/video.jpg" style="width:945px; margin-top:20px" />
@@ -137,17 +462,17 @@
             </div>
         </div>
         <div style="display:inline-block;overflow:hidden;  width:295px; padding: 0 5px; height:380px; background-color:#eeeeee; margin-left:10px; margin-right:10px;">
-            <img src="/Images/img_avatar.png" style="border-radius:50%; width:100px; margin-top:30px;" />
-            <span style="display:block; margin-top:15px; font-size:21px; font-family:OpenSans-Semibold">Филипчик Алексей</span>
-            <span style="display:block; margin-top:10px; font-size:15px; font-family:OpenSans-Regular; color:#8e8e8e">ведущий специалист по маркетингу</span>
+            <img src="/Images/img_avatar2.png" style="border-radius:50%; width:100px; margin-top:30px;" />
+            <span style="display:block; margin-top:15px; font-size:21px; font-family:OpenSans-Semibold">Елена Лозовицкая</span>
+            <span style="display:block; margin-top:10px; font-size:15px; font-family:OpenSans-Regular; color:#8e8e8e">специалист отдела маркетинга</span>
             <div style="margin-top:15px; ">
                 <span style="display:block; font-size:16px; font-family:OpenSans-Semibold; color:#41a271">RU, BY, EN</span>
             </div>
             <div style="margin-top:25px; ">
-                <span style="display:inline-block; font-size:16px; font-family:OpenSans-Semibold; color:#5a5a5a">+375 (29) 155-58-90</span>
+                <span style="display:inline-block; font-size:16px; font-family:OpenSans-Semibold; color:#5a5a5a">+375 (29) 155-58-94</span>
             </div>
             <div style="margin-top:7px; ">
-                <a href="mailto:marketing@omcprofil.by" style="color: #41a271; text-decoration:underline">marketing@omcprofil.by</a>
+                <a href="mailto:marketing@zovprofil.by" style="color: #41a271; text-decoration:underline">marketing@zovprofil.by</a>
             </div>
         </div>
         <div style="display:inline-block;overflow:hidden;  width:295px; height:380px; background-color:#eeeeee; margin-left:10px; margin-right:10px;">
@@ -170,7 +495,7 @@
                     все контакты
                 </a>
             </div>
-        </div>
+        </div>--%>
 
 
 
@@ -182,7 +507,7 @@
 
 
 
-        <div style="text-align:center">
+       <%-- <div style="text-align:center">
             <div class="write-dn-but" onclick="ShowMessage()">
                 ОСТАВИТЬ ЗАЯВКУ НА СОТРУДНИЧЕСТВО
             </div>
@@ -198,14 +523,32 @@
                  <div style="background-color:rgb(250,250,250); position:absolute; float:left; left:0px; right:0px; top:0px; bottom:0px; border-style:solid; border-width:1px; border-color:rgb(160,160,160);
                         -webkit-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, .2);
                         box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, .2); padding:10px; margin:0;">
-                        <img id="ItemImage" src="/Images/Loader.GIF" style="max-width:100%; max-height:100%; position: absolute; margin: auto; top: 0; left: 0; right: 0; bottom: 0;" />             
+                        <img id="ItemImage" src="//Images/Loader.GIF" style="max-width:100%; max-height:100%; position: absolute; margin: auto; top: 0; left: 0; right: 0; bottom: 0;" />             
                 </div>              
             </div>
         </div>
-    </div>
+    </div>--%>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip({
+            template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner toooltip" style="width:500px; background: rgba(0, 0, 0, 0.7); border-radius: 6px; padding: 10px;"></div></div>'
+        });
+    });
+
     var ci = 1;
     var ih;
     var SliderUrls;
@@ -241,8 +584,7 @@
     })
 
 
-    function Loop()
-    {
+    function Loop() {
         var i = -1;
 
         if (ci == parseInt(document.getElementById("hSlidesCount").value))
@@ -254,8 +596,7 @@
     }
 
     function ShowImage(i) {
-        if (i == 1)
-        {
+        if (i == 1) {
             document.getElementById('im' + i.toString()).style.opacity = 1;
 
             $(document.getElementById('im' + ci.toString())).fadeTo("slow", 0, function () {
@@ -278,12 +619,34 @@
     function OpenSliderImage() {
         $('#ImageDialogModal').modal('show');
 
-        document.getElementById('ItemImage').src = SliderUrls[ci - 1];
-        //document.getElementById('ItemImage').src = '/Images/ClientsCatalogImages/' + SliderUrls[ci - 1];
+        document.getElementById('ItemImage').src = Catalog.URL + SliderUrls[ci - 1];
     }
 
-    function SelectImage(i)
-    {
+    function redirectToCategory(elementId) {
+        window.location.href = SliderLinks[ci - 1];
+        //window.open(SliderLinks[ci - 1], '_blank');
+    }
+
+    var clickCount = 0;
+    var clickDelay = 300; // Задержка для определения двойного нажатия (300 миллисекунд)
+
+    function handleClick(event) {
+        clickCount++;
+        setTimeout(function () {
+            if (clickCount === 1) {
+                redirectToCategory();
+            }
+            clickCount = 0;
+        }, clickDelay);
+    }
+
+    function handleDoubleClick(event) {
+        event.preventDefault(); // Предотвращаем переход по ссылке по двойному клику
+        // Открывает картинку на весь экран или выполняет требуемые действия
+        OpenSliderImage();
+    }
+
+    function SelectImage(i) {
         clearInterval(ih);
 
         if (i != ci) {
@@ -307,21 +670,21 @@
         ih = setInterval(Loop, 4000);
     }
 
-    //function SetSliderNames(list) {
-    //    SliderNames = Array();
+    function SetSliderLinks(list) {
+        SliderLinks = Array();
 
-    //    var s = "";
+        var s = "";
 
-    //    for (var i = 0; i < list.length; i++) {
-    //        if (list[i] == ';') {
-    //            SliderNames.push(s);
-    //            s = "";
-    //            continue;
-    //        }
+        for (var i = 0; i < list.length; i++) {
+            if (list[i] == ';') {
+                SliderLinks.push(s);
+                s = "";
+                continue;
+            }
 
-    //        s += list[i];
-    //    }
-    //}
+            s += list[i];
+        }
+    }
 
     function SetSliderUrls(list) {
         SliderUrls = Array();
@@ -340,4 +703,7 @@
     }
 
 </script>
+<script src="https://kit.fontawesome.com/76d835b4d7.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="../Scripts/swiper.js"></script>
 </asp:Content>
