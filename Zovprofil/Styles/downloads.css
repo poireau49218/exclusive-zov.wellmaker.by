@@ -175,7 +175,7 @@
 
 .downitem {
     min-height: 60px;
-    width:600px;
+    /*width:600px;*/
     border: 1px solid #ededed;
     background-color: white;
     text-align: left;

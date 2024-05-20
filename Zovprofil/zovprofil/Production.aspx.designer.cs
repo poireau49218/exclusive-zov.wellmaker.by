@@ -42,24 +42,6 @@ namespace Zovprofil.zovprofil
         protected global::System.Web.UI.HtmlControls.HtmlInputHidden hDesc;
 
         /// <summary>
-        /// FrontsCat элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl FrontsCat;
-
-        /// <summary>
-        /// ExpImageFronts элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage ExpImageFronts;
-
-        /// <summary>
         /// FrontsContainer элемент управления.
         /// </summary>
         /// <remarks>
@@ -69,24 +51,6 @@ namespace Zovprofil.zovprofil
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl FrontsContainer;
 
         /// <summary>
-        /// DecorCat элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DecorCat;
-
-        /// <summary>
-        /// ExpImageProfile элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage ExpImageProfile;
-
-        /// <summary>
         /// DecorContainer элемент управления.
         /// </summary>
         /// <remarks>
@@ -94,24 +58,6 @@ namespace Zovprofil.zovprofil
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl DecorContainer;
-
-        /// <summary>
-        /// PromCat элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl PromCat;
-
-        /// <summary>
-        /// ExpImagePromotion элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage ExpImagePromotion;
 
         /// <summary>
         /// PromotionContainer элемент управления.
@@ -132,6 +78,33 @@ namespace Zovprofil.zovprofil
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl ReadyContainer;
 
         /// <summary>
+        /// Swiper1 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Swiper1;
+
+        /// <summary>
+        /// swiperWrapper1 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl swiperWrapper1;
+
+        /// <summary>
+        /// DescriptionText1 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DescriptionText1;
+
+        /// <summary>
         /// ProductItemCont элемент управления.
         /// </summary>
         /// <remarks>
@@ -141,6 +114,33 @@ namespace Zovprofil.zovprofil
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl ProductItemCont;
 
         /// <summary>
+        /// product_image_main элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage product_image_main;
+
+        /// <summary>
+        /// prod_im_s2 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl prod_im_s2;
+
+        /// <summary>
+        /// product_image_tech элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage product_image_tech;
+
+        /// <summary>
         /// ProductItemName элемент управления.
         /// </summary>
         /// <remarks>
@@ -148,33 +148,6 @@ namespace Zovprofil.zovprofil
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl ProductItemName;
-
-        /// <summary>
-        /// FrontSliderCont элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl FrontSliderCont;
-
-        /// <summary>
-        /// FrontImagesSliderCont элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl FrontImagesSliderCont;
-
-        /// <summary>
-        /// FrontSliderNavCont элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl FrontSliderNavCont;
 
         /// <summary>
         /// DescriptionDiv элемент управления.
@@ -231,6 +204,24 @@ namespace Zovprofil.zovprofil
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Material;
 
         /// <summary>
+        /// ColorDiv элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ColorDiv;
+
+        /// <summary>
+        /// Colors элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Colors;
+
+        /// <summary>
         /// NotBasicFrontsDiv элемент управления.
         /// </summary>
         /// <remarks>
@@ -267,13 +258,13 @@ namespace Zovprofil.zovprofil
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl RelatedDecors;
 
         /// <summary>
-        /// ProductMenu элемент управления.
+        /// MainImageDiv элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ProductMenu;
+        protected global::System.Web.UI.HtmlControls.HtmlImage MainImageDiv;
 
         /// <summary>
         /// MainDescriptionDiv элемент управления.
@@ -285,39 +276,39 @@ namespace Zovprofil.zovprofil
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl MainDescriptionDiv;
 
         /// <summary>
-        /// SliderCont элемент управления.
+        /// Swiper2 элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl SliderCont;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Swiper2;
 
         /// <summary>
-        /// ImagesSliderCont элемент управления.
+        /// swiperWrapper2 элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ImagesSliderCont;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl swiperWrapper2;
 
         /// <summary>
-        /// SliderNavCont элемент управления.
+        /// DescriptionText2 элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl SliderNavCont;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DescriptionText2;
 
         /// <summary>
-        /// DescriptionText элемент управления.
+        /// ProductMenu элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DescriptionText;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ProductMenu;
     }
 }
